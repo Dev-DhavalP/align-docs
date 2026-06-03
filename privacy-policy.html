@@ -1,38 +1,471 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Align Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Align</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #24292f;
+      background-color: #ffffff;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #d0d7de;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #24292f;
+      letter-spacing: -0.5px;
+    }
+
+    /* ── Main Container ──────────────────────────────────── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Typography & Headings ───────────────────────────── */
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0969da;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: #57606a;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #24292f;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #24292f;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #24292f;
+    }
+
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Lists ───────────────────────────────────────────── */
+    ul, ol {
+      margin-bottom: 20px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #24292f;
+    }
+
+    /* ── Table of Contents ───────────────────────────────── */
+    .toc {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #57606a;
+      margin-top: 0;
+      margin-bottom: 12px;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .toc ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      font-size: 14px;
+      color: #0969da;
+    }
+
+    /* ── Tables ──────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #d0d7de;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+      color: #24292f;
+    }
+
+    .data-table tr:nth-child(even) {
+      background-color: #f6f8fa;
+    }
+
+    /* ── Note / Callout Boxes ────────────────────────────── */
+    .info-card {
+      background-color: #ddf4ff;
+      border-left: 4px solid #0969da;
+      padding: 16px;
+      margin: 24px 0;
+      font-size: 14px;
+      color: #0969da;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .info-card div {
+      color: #24292f;
+    }
+
+    /* ── Contact Section ─────────────────────────────────── */
+    .contact-card {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+      color: #24292f;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: #57606a;
+      margin-bottom: 12px;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid #d0d7de;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #57606a;
+    }
+
+    footer p {
+      margin-bottom: 0;
+      color: #57606a;
+    }
+
+    footer a {
+      margin: 0 8px;
+      color: #57606a;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 12px 16px;
+      }
+      .container {
+        padding: 24px 16px 60px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .data-table {
+        font-size: 13px;
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; max-width: 800px; margin: 40px auto; padding: 20px;">
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_18488_4425)">
+        <path d="M36 11.9531H0V5.97656C0 2.68976 2.6131 0 5.80593 0H30.1941C33.3869 0 36 2.68976 36 5.97656V11.9531Z" fill="#34C759"/>
+        <path d="M36 17.0508H0V11.0736C0 7.78646 2.6131 5.09766 5.80593 5.09766H30.1941C33.3869 5.09766 36 7.78646 36 11.0736V17.0508Z" fill="#FFCC00"/>
+        <path d="M36 25.3125H0V16.1719C0 12.8851 2.6131 10.1953 5.80593 10.1953H30.1941C33.3869 10.1953 36 12.8851 36 16.1719V25.3125Z" fill="#5856D6"/>
+        <path d="M36.0011 29.3906L0.00110073 29.3906L-2.28785e-05 25.664C-0.400583 22.4017 1.90041 19.3997 5.06943 19.0106L29.6247 15.9956C32.7938 15.6065 35.6005 17.9721 36.0011 21.2344L36.0011 29.3906Z" fill="#EBE9E0"/>
+        <path d="M36 29.3203H0V30.0234C0 33.3102 2.6131 36 5.80593 36H30.1941C33.3869 36 36 33.3102 36 30.0234V29.3203Z" fill="#EBE9E0"/>
+        <path d="M28.053 19.211C27.9715 19.2239 27.8916 19.2374 27.8132 19.2509L27.5839 19.2937L27.4729 19.3163L27.2584 19.3633L27.0544 19.4133C25.2927 19.8701 24.68 20.7134 24.7899 22.53L24.8055 22.7395L24.827 22.958C24.831 22.9949 24.835 23.0326 24.8399 23.0706L24.87 23.3019L24.8874 23.421L24.9062 23.5422C24.9191 23.6237 24.9325 23.7036 24.9461 23.782L24.9889 24.0113L25.0115 24.1223L25.0585 24.3368L25.1084 24.5408C25.5653 26.3025 26.4086 26.9152 28.2251 26.8053L28.4346 26.7897L28.6531 26.7682C28.6901 26.7642 28.7278 26.7602 28.7657 26.7553L28.997 26.7252L29.2374 26.689L29.4771 26.6492L29.7064 26.6063L29.8175 26.5837L30.0319 26.5367L30.236 26.4868C31.9976 26.0299 32.6103 25.1867 32.5004 23.3701L32.4849 23.1606L32.4633 22.9421C32.4594 22.9051 32.4553 22.8674 32.4505 22.8295L32.4203 22.5982L32.3842 22.3578L32.3443 22.1181L32.3015 21.8888L32.2789 21.7777L32.2319 21.5633L32.1819 21.3592C31.7251 19.5976 30.8818 18.9849 29.0652 19.0948L28.8557 19.1103L28.6372 19.1319C28.5997 19.136 28.5621 19.1403 28.5246 19.1447L28.2933 19.1749L28.1742 19.1922L28.053 19.211Z" fill="url(#paint0_linear_18488_4425)"/>
+        <path d="M29.3422 21.8019C29.3988 21.7242 29.4829 21.671 29.5774 21.653C29.6719 21.6351 29.7697 21.6538 29.8509 21.7053C29.9321 21.7569 29.9907 21.8374 30.0146 21.9305C30.0386 22.0237 30.0263 22.1224 29.9801 22.2068L29.9546 22.2469L28.6959 23.9793C28.6417 24.0539 28.5621 24.1062 28.4722 24.1263C28.3822 24.1464 28.288 24.133 28.2072 24.0885L28.1672 24.0631L27.3009 23.4337C27.2232 23.3771 27.17 23.2929 27.152 23.1984C27.1341 23.1039 27.1528 23.0062 27.2043 22.925C27.2559 22.8438 27.3364 22.7852 27.4295 22.7612C27.5227 22.7372 27.6215 22.7496 27.7058 22.7958L27.7459 22.8213L28.3059 23.2278L29.3422 21.8019Z" fill="white"/>
+        </g>
+        <defs>
+        <linearGradient id="paint0_linear_18488_4425" x1="28.053" y1="19.211" x2="29.2374" y2="26.689" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#5EC6F5"/>
+        <stop offset="1" stop-color="#007AFF"/>
+        </linearGradient>
+        <clipPath id="clip0_18488_4425">
+        <rect width="36" height="36" rx="6" fill="white"/>
+        </clipPath>
+        </defs>
+    </svg>
+  </div>
+  <span class="logo-text">align</span>
+</header>
+
+<div class="container">
   <h1>Privacy Policy</h1>
+  <p class="last-updated">Last updated: June 3, 2026 &nbsp;·&nbsp; Effective: June 3, 2026</p>
 
-  <p>Last updated: June 2026</p>
+  <div class="info-card">
+    <div>This policy applies to the Align mobile application ("App") available on Android. By using Align, you agree to the practices described in this document. Please read it carefully.</div>
+  </div>
 
-  <p>Align respects your privacy. This Privacy Policy explains how we collect, use, and protect your information.</p>
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Information Sharing</a></li>
+      <li><a href="#s4">Data Storage &amp; Security</a></li>
+      <li><a href="#s5">Data Retention</a></li>
+      <li><a href="#s6">Your Rights &amp; Choices</a></li>
+      <li><a href="#s7">Push Notifications</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Changes to This Policy</a></li>
+      <li><a href="#s10">Contact Us</a></li>
+    </ol>
+  </nav>
 
-  <h2>Information We Collect</h2>
-  <ul>
-    <li>Google account information</li>
-    <li>Reminder and subscription data</li>
-    <li>App usage analytics</li>
-    <li>Notification preferences</li>
-  </ul>
+  <!-- Section 1 -->
+  <div class="section" id="s1">
+    <h2>1. Information We Collect</h2>
+    <p>We collect the minimum information necessary to provide the Align service.</p>
 
-  <h2>How We Use Information</h2>
-  <ul>
-    <li>To manage reminders and notifications</li>
-    <li>To improve app experience</li>
-    <li>To provide analytics and insights</li>
-  </ul>
+    <p><strong>Information you provide directly:</strong></p>
+    <ul>
+      <li><strong>Account information</strong> - your name, email address, and profile photo provided through Google Sign-In.</li>
+      <li><strong>Reminder data</strong> - bill names, amounts, due dates, payment frequencies, categories, and notes you enter into the App.</li>
+      <li><strong>Payment information</strong> - subscription plan selections and transaction references processed through Razorpay. We do not store your payment card or UPI details directly.</li>
+    </ul>
 
-  <h2>Data Security</h2>
-  <p>Your data is securely stored using Supabase infrastructure.</p>
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li><strong>Device information</strong> - device model, operating system version, and app version for support and crash reporting.</li>
+      <li><strong>Usage data</strong> - feature usage patterns (anonymised) to improve the App. We do not track individual browsing behaviour.</li>
+      <li><strong>Push notification tokens</strong> - device tokens required to deliver bill reminders to your device.</li>
+    </ul>
 
-  <h2>Third-Party Services</h2>
-  <p>Align uses Google Sign-In, Supabase, and analytics services.</p>
+    <p><strong>Information we do NOT collect:</strong></p>
+    <ul>
+      <li>Bank account numbers, credit card details, or UPI credentials.</li>
+      <li>Location data or GPS coordinates.</li>
+      <li>Contacts, photos, or files from your device.</li>
+      <li>Browsing history outside the App.</li>
+    </ul>
+  </div>
 
-  <h2>Contact</h2>
-  <p>Email: dhavalptl22@gmail.com</p>
+  <!-- Section 2 -->
+  <div class="section" id="s2">
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Purpose</th>
+          <th>Legal Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Providing and operating the App (reminders, calendar, analytics)</td><td>Contract performance</td></tr>
+        <tr><td>Authenticating your account via Google Sign-In</td><td>Contract performance</td></tr>
+        <tr><td>Processing Pro plan subscription payments via Razorpay</td><td>Contract performance</td></tr>
+        <tr><td>Sending bill reminder push notifications to your device</td><td>Consent (you can withdraw anytime)</td></tr>
+        <tr><td>Responding to support enquiries</td><td>Legitimate interest</td></tr>
+        <tr><td>Improving App features and fixing bugs (anonymised data)</td><td>Legitimate interest</td></tr>
+        <tr><td>Complying with legal obligations</td><td>Legal obligation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section" id="s3">
+    <h2>3. Information Sharing</h2>
+    <p>We do not sell, trade, or rent your personal information. We share data only with the following trusted service providers who are contractually obligated to protect it:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Service Provider</th>
+          <th>Purpose</th>
+          <th>Data Shared</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Supabase</strong></td><td>Database, authentication, cloud storage</td><td>Account data, reminder data</td></tr>
+        <tr><td><strong>Google</strong></td><td>Sign-In authentication</td><td>Name, email, profile photo</td></tr>
+        <tr><td><strong>Razorpay</strong></td><td>Payment processing</td><td>Payment amount, transaction reference</td></tr>
+        <tr><td><strong>Expo (Meta)</strong></td><td>Push notification delivery</td><td>Device push token</td></tr>
+      </tbody>
+    </table>
+
+    <p>We may also disclose information if required by law, court order, or to protect the safety of our users or the public.</p>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section" id="s4">
+    <h2>4. Data Storage &amp; Security</h2>
+    <p>Your data is stored on Supabase's secure cloud infrastructure. All data is encrypted in transit (TLS 1.2+) and at rest using AES-256 encryption.</p>
+    <p>We implement Row-Level Security (RLS) policies ensuring that each user can only access their own data. API keys and secrets are never stored in the App's source code.</p>
+    <p>The App also stores a local offline cache on your device using MMKV encrypted storage. This enables reminders and notifications to function without an internet connection.</p>
+    <div class="info-card">
+      <div>🔐 While we take reasonable precautions to protect your data, no method of electronic transmission or storage is 100% secure. We encourage you to use a strong Google account password and keep your device updated.</div>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="section" id="s5">
+    <h2>5. Data Retention</h2>
+    <p>We retain your data according to the following schedule:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Retention Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Active account data (reminders, settings)</td><td>While your account is active</td></tr>
+        <tr><td>Reminder data after Pro plan expires</td><td>180 days (then deleted if not renewed)</td></tr>
+        <tr><td>Notification logs</td><td>30 days</td></tr>
+        <tr><td>Payment records</td><td>Lifetime of account (never deleted)</td></tr>
+        <tr><td>Account data after deletion request</td><td>Soft-deleted immediately; permanently removed after 180 days</td></tr>
+        <tr><td>Active Pro plan - account deletion</td><td>Subscription cancelled immediately; data deleted after 180 days</td></tr>
+      </tbody>
+    </table>
+
+    <p>After deletion, your data is permanently and irreversibly removed from our systems within the stated periods, except for payment records required for legal and accounting purposes.</p>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="section" id="s6">
+    <h2>6. Your Rights &amp; Choices</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> - Request a copy of the personal data we hold about you.</li>
+      <li><strong>Correction</strong> - Request correction of inaccurate or incomplete data.</li>
+      <li><strong>Deletion</strong> - Request deletion of your account and all associated data via Account → Delete Account in the App.</li>
+      <li><strong>Portability</strong> - Export your reminder data as a CSV file via the Analytics → Export Report feature (Pro users).</li>
+      <li><strong>Withdraw consent</strong> - Disable push notifications at any time via your device settings or Account → Notification Preferences.</li>
+      <li><strong>Object</strong> - Object to processing of your data for legitimate interest purposes.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>. We will respond within 30 days.</p>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="section" id="s7">
+    <h2>7. Push Notifications</h2>
+    <p>Align uses push notifications to deliver bill reminders directly to your device. Notifications are scheduled locally on your device and can fire without an internet connection.</p>
+    <p>You can control notifications at any time:</p>
+    <ul>
+      <li>Via <strong>Account → Notification Preferences</strong> in the App.</li>
+      <li>Via your device's <strong>Settings → Apps → Align → Notifications</strong>.</li>
+    </ul>
+    <p>Disabling notifications does not affect your reminder data stored in the App. Your Notification Inbox continues to show all notifications regardless of device permission status.</p>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="section" id="s8">
+    <h2>8. Children's Privacy</h2>
+    <p>Align is not directed at individuals under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided us with personal information, please contact us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> and we will promptly delete it.</p>
+  </div>
+
+  <!-- Section 9 -->
+  <div class="section" id="s9">
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will:</p>
+    <ul>
+      <li>Update the "Last updated" date at the top of this page.</li>
+      <li>Notify you via an in-app notification.</li>
+      <li>For significant changes, request your renewed consent where required by law.</li>
+    </ul>
+    <p>Continued use of the App after changes become effective constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <!-- Section 10 -->
+  <div class="section" id="s10">
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+
+    <div class="contact-card">
+      <h3>Get in touch</h3>
+      <p>We aim to respond to all privacy enquiries within 30 days.</p>
+      <p><a href="mailto:alignapps4@gmail.com">✉️ alignapps4@gmail.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Align. All rights reserved. &nbsp;·&nbsp;
+    <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="./terms.html">Terms &amp; Conditions</a>
+  </p>
+</footer>
 
 </body>
 </html>
