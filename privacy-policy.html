@@ -303,8 +303,8 @@
 
     <p><strong>Information collected automatically:</strong></p>
     <ul>
-      <li><strong>Device information</strong> - device model, operating system version, and app version for support and crash reporting.</li>
-      <li><strong>Usage data</strong> - feature usage patterns (anonymised) to improve the App. We do not track individual browsing behaviour.</li>
+      <li><strong>Device information</strong> - device model, operating system version, app version, and technical diagnostic information required for troubleshooting and security.</li>
+      <li><strong>Usage data</strong> - feature interactions, crash diagnostics, and performance metrics may be collected in aggregated or pseudonymised form to improve app reliability and user experience. We do not track individual browsing behaviour.</li>
       <li><strong>Push notification tokens</strong> - device tokens required to deliver bill reminders to your device.</li>
     </ul>
 
@@ -358,7 +358,7 @@
         <tr><td><strong>Supabase</strong></td><td>Database, authentication, cloud storage</td><td>Account data, reminder data</td></tr>
         <tr><td><strong>Google</strong></td><td>Sign-In authentication</td><td>Name, email, profile photo</td></tr>
         <tr><td><strong>Razorpay</strong></td><td>Payment processing</td><td>Payment amount, transaction reference</td></tr>
-        <tr><td><strong>Expo (Meta)</strong></td><td>Push notification delivery</td><td>Device push token</td></tr>
+        <tr><td><strong>Expo</strong></td><td>Push notification delivery</td><td>Device push token</td></tr>
       </tbody>
     </table>
 
@@ -371,6 +371,7 @@
     <p>Your data is stored on Supabase's secure cloud infrastructure. All data is encrypted in transit (TLS 1.2+) and at rest using AES-256 encryption.</p>
     <p>We implement Row-Level Security (RLS) policies ensuring that each user can only access their own data. API keys and secrets are never stored in the App's source code.</p>
     <p>The App also stores a local offline cache on your device using MMKV encrypted storage. This enables reminders and notifications to function without an internet connection.</p>
+    <p>Additionally, the App may rely on Google Play Services and related Google infrastructure to provide authentication, notifications, security, and device compatibility features.</p>
     <div class="info-card">
       <div>🔐 While we take reasonable precautions to protect your data, no method of electronic transmission or storage is 100% secure. We encourage you to use a strong Google account password and keep your device updated.</div>
     </div>
@@ -379,26 +380,31 @@
   <!-- Section 5 -->
   <div class="section" id="s5">
     <h2>5. Data Retention</h2>
-    <p>We retain your data according to the following schedule:</p>
+    <p>We retain your data according to the following schedule to balance user control, privacy, and account history continuity:</p>
 
     <table class="data-table">
       <thead>
         <tr>
           <th>Data Type</th>
           <th>Retention Period</th>
+          <th>Future Sign-In Restore Behavior</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Active account data (reminders, settings)</td><td>While your account is active</td></tr>
-        <tr><td>Reminder data after Pro plan expires</td><td>180 days (then deleted if not renewed)</td></tr>
-        <tr><td>Notification logs</td><td>30 days</td></tr>
-        <tr><td>Payment records</td><td>Lifetime of account (never deleted)</td></tr>
-        <tr><td>Account data after deletion request</td><td>Soft-deleted immediately; permanently removed after 180 days</td></tr>
-        <tr><td>Active Pro plan - account deletion</td><td>Subscription cancelled immediately; data deleted after 180 days</td></tr>
+        <tr>
+          <td><strong>Reminder &amp; Notification Data</strong> (bill names, amounts, due dates, reminder days, notes, push tokens, notification logs)</td>
+          <td>Retained for up to <strong>180 days</strong> following account deletion request or downgrade from Pro to Free plan, then permanently and automatically removed from the database server.</td>
+          <td><strong>Not restored</strong> if 180 days have passed. If signed in again within 180 days, this data is restored.</td>
+        </tr>
+        <tr>
+          <td><strong>Profile &amp; Payment Data</strong> (User profile details, email, payment records, transaction history, subscription history)</td>
+          <td><strong>Permanently retained</strong> on the database server for the lifetime of the account history.</td>
+          <td><strong>Fully restored</strong> and displayed immediately upon subsequent sign-ins.</td>
+        </tr>
       </tbody>
     </table>
 
-    <p>After deletion, your data is permanently and irreversibly removed from our systems within the stated periods, except for payment records required for legal and accounting purposes.</p>
+    <p>After the 180-day period following deletion or downgrade, reminder and notification data is permanently and irreversibly removed from our systems. Payment records, transaction details, and user profiles are retained permanently for legal, accounting, and user recovery purposes.</p>
   </div>
 
   <!-- Section 6 -->
@@ -408,7 +414,7 @@
     <ul>
       <li><strong>Access</strong> - Request a copy of the personal data we hold about you.</li>
       <li><strong>Correction</strong> - Request correction of inaccurate or incomplete data.</li>
-      <li><strong>Deletion</strong> - Request deletion of your account and all associated data via Account → Delete Account in the App.</li>
+      <li><strong>Deletion</strong> - Request deletion of your account via Account → Delete Account in the App. Your reminder and notification data will be retained for 180 days before being permanently deleted, while profile and payment records remain stored permanently to support future sign-ins.</li>
       <li><strong>Portability</strong> - Export your reminder data as a CSV file via the Analytics → Export Report feature (Pro users).</li>
       <li><strong>Withdraw consent</strong> - Disable push notifications at any time via your device settings or Account → Notification Preferences.</li>
       <li><strong>Object</strong> - Object to processing of your data for legitimate interest purposes.</li>
