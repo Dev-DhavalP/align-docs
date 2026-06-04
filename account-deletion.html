@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Deletion - Align</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #24292f;
+      background-color: #ffffff;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #d0d7de;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #24292f;
+      letter-spacing: -0.5px;
+    }
+
+    /* ── Main Container ──────────────────────────────────── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Typography & Headings ───────────────────────────── */
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0969da;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: #57606a;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #24292f;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #24292f;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #24292f;
+    }
+
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Lists ───────────────────────────────────────────── */
+    ul, ol {
+      margin-bottom: 20px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #24292f;
+    }
+
+    /* ── Table of Contents ───────────────────────────────── */
+    .toc {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #57606a;
+      margin-top: 0;
+      margin-bottom: 12px;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .toc ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      font-size: 14px;
+      color: #0969da;
+    }
+
+    /* ── Tables ──────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #d0d7de;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+      color: #24292f;
+    }
+
+    .data-table tr:nth-child(even) {
+      background-color: #f6f8fa;
+    }
+
+    /* ── Note / Callout Boxes ────────────────────────────── */
+    .info-card {
+      background-color: #ddf4ff;
+      border-left: 4px solid #0969da;
+      padding: 16px;
+      margin: 24px 0;
+      font-size: 14px;
+      color: #0969da;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .info-card div {
+      color: #24292f;
+    }
+
+    .warning-card {
+      background-color: #fff8c5;
+      border-left: 4px solid #9a6700;
+      padding: 16px;
+      margin: 24px 0;
+      font-size: 14px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .warning-card div {
+      color: #24292f;
+    }
+
+    /* ── Contact Section ─────────────────────────────────── */
+    .contact-card {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+      color: #24292f;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: #57606a;
+      margin-bottom: 12px;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid #d0d7de;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #57606a;
+    }
+
+    footer p {
+      margin-bottom: 0;
+      color: #57606a;
+    }
+
+    footer a {
+      margin: 0 8px;
+      color: #57606a;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 12px 16px;
+      }
+      .container {
+        padding: 24px 16px 60px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .data-table {
+        font-size: 13px;
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_18488_4425)">
+        <path d="M36 11.9531H0V5.97656C0 2.68976 2.6131 0 5.80593 0H30.1941C33.3869 0 36 2.68976 36 5.97656V11.9531Z" fill="#34C759"/>
+        <path d="M36 17.0508H0V11.0736C0 7.78646 2.6131 5.09766 5.80593 5.09766H30.1941C33.3869 5.09766 36 7.78646 36 11.0736V17.0508Z" fill="#FFCC00"/>
+        <path d="M36 25.3125H0V16.1719C0 12.8851 2.6131 10.1953 5.80593 10.1953H30.1941C33.3869 10.1953 36 12.8851 36 16.1719V25.3125Z" fill="#5856D6"/>
+        <path d="M36.0011 29.3906L0.00110073 29.3906L-2.28785e-05 25.664C-0.400583 22.4017 1.90041 19.3997 5.06943 19.0106L29.6247 15.9956C32.7938 15.6065 35.6005 17.9721 36.0011 21.2344L36.0011 29.3906Z" fill="#EBE9E0"/>
+        <path d="M36 29.3203H0V30.0234C0 33.3102 2.6131 36 5.80593 36H30.1941C33.3869 36 36 33.3102 36 30.0234V29.3203Z" fill="#EBE9E0"/>
+        <path d="M28.053 19.211C27.9715 19.2239 27.8916 19.2374 27.8132 19.2509L27.5839 19.2937L27.4729 19.3163L27.2584 19.3633L27.0544 19.4133C25.2927 19.8701 24.68 20.7134 24.7899 22.53L24.8055 22.7395L24.827 22.958C24.831 22.9949 24.835 23.0326 24.8399 23.0706L24.87 23.3019L24.8874 23.421L24.9062 23.5422C24.9191 23.6237 24.9325 23.7036 24.9461 23.782L24.9889 24.0113L25.0115 24.1223L25.0585 24.3368L25.1084 24.5408C25.5653 26.3025 26.4086 26.9152 28.2251 26.8053L28.4346 26.7897L28.6531 26.7682C28.6901 26.7642 28.7278 26.7602 28.7657 26.7553L28.997 26.7252L29.2374 26.689L29.4771 26.6492L29.7064 26.6063L29.8175 26.5837L30.0319 26.5367L30.236 26.4868C31.9976 26.0299 32.6103 25.1867 32.5004 23.3701L32.4849 23.1606L32.4633 22.9421C32.4594 22.9051 32.4553 22.8674 32.4505 22.8295L32.4203 22.5982L32.3842 22.3578L32.3443 22.1181L32.3015 21.8888L32.2789 21.7777L32.2319 21.5633L32.1819 21.3592C31.7251 19.5976 30.8818 18.9849 29.0652 19.0948L28.8557 19.1103L28.6372 19.1319C28.5997 19.136 28.5621 19.1403 28.5246 19.1447L28.2933 19.1749L28.1742 19.1922L28.053 19.211Z" fill="url(#paint0_linear_18488_4425)"/>
+        <path d="M29.3422 21.8019C29.3988 21.7242 29.4829 21.671 29.5774 21.653C29.6719 21.6351 29.7697 21.6538 29.8509 21.7053C29.9321 21.7569 29.9907 21.8374 30.0146 21.9305C30.0386 22.0237 30.0263 22.1224 29.9801 22.2068L29.9546 22.2469L28.6959 23.9793C28.6417 24.0539 28.5621 24.1062 28.4722 24.1263C28.3822 24.1464 28.288 24.133 28.2072 24.0885L28.1672 24.0631L27.3009 23.4337C27.2232 23.3771 27.17 23.2929 27.152 23.1984C27.1341 23.1039 27.1528 23.0062 27.2043 22.925C27.2559 22.8438 27.3364 22.7852 27.4295 22.7612C27.5227 22.7372 27.6215 22.7496 27.7058 22.7958L27.7459 22.8213L28.3059 23.2278L29.3422 21.8019Z" fill="white"/>
+        </g>
+        <defs>
+        <linearGradient id="paint0_linear_18488_4425" x1="28.053" y1="19.211" x2="29.2374" y2="26.689" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#5EC6F5"/>
+        <stop offset="1" stop-color="#007AFF"/>
+        </linearGradient>
+        <clipPath id="clip0_18488_4425">
+        <rect width="36" height="36" rx="6" fill="white"/>
+        </clipPath>
+        </defs>
+    </svg>
+  </div>
+  <span class="logo-text">align</span>
+</header>
+
+<div class="container">
+  <h1>Account Deletion</h1>
+  <p class="last-updated">Last updated: June 4, 2026 &nbsp;·&nbsp; Effective: June 4, 2026</p>
+
+  <div class="info-card">
+    <div>This page explains how Align users can request account deactivation, account deletion, and data removal. Please read it carefully.</div>
+  </div>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">How to Request Account Deletion</a></li>
+      <li><a href="#s2">What Happens After Deactivation?</a></li>
+      <li><a href="#s3">Data Deleted After 180 Days</a></li>
+      <li><a href="#s4">Data That May Be Retained</a></li>
+      <li><a href="#s5">Immediate Data Deletion Request</a></li>
+      <li><a href="#s6">Related Documents</a></li>
+      <li><a href="#s7">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- Section 1 -->
+  <div class="section" id="s1">
+    <h2>1. How to Request Account Deletion</h2>
+    <p>You can initiate account deletion directly within the Align mobile application ("App"):</p>
+    <ul>
+      <li>Open the Align app</li>
+      <li>Go to <strong>Account</strong></li>
+      <li>Select <strong>Deactivate Account</strong></li>
+      <li>Confirm your request</li>
+    </ul>
+
+    <div class="info-card">
+      <div>ℹ️ Account deletion begins with an immediate account deactivation and a 180-day recovery period.</div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section" id="s2">
+    <h2>2. What Happens After Deactivation?</h2>
+    <p>Upon requesting account deactivation, the following changes occur:</p>
+    <ul>
+      <li>Your account is immediately deactivated and you are signed out of the App.</li>
+      <li>Your account enters a 180-day recovery period.</li>
+      <li>You may reactivate your account by signing in again within the 180-day window.</li>
+      <li>If reactivated during this period, eligible data will be fully restored.</li>
+    </ul>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section" id="s3">
+    <h2>3. Data Deleted After 180 Days</h2>
+    <p>If you do not reactivate your account within 180 days of deactivation, the following data will be permanently and irreversibly deleted from our database servers:</p>
+    <ul>
+      <li>Reminder data (bill names, amounts, due dates, payment frequencies, categories, notes)</li>
+      <li>Notification logs and history</li>
+      <li>Push notification tokens</li>
+    </ul>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section" id="s4">
+    <h2>4. Data That May Be Retained</h2>
+    <p>Certain information may be retained for up to 8 years, or longer if required by applicable tax, accounting, fraud prevention, legal, regulatory, or security obligations:</p>
+    <ul>
+      <li>Name and email address</li>
+      <li>Subscription history and transaction references</li>
+      <li>Payment and billing records processed through Razorpay</li>
+    </ul>
+    <p>Retained records are stored securely and used only for the purposes described in our <a href="./privacy-policy.html">Privacy Policy</a> and <a href="./terms.html">Terms &amp; Conditions</a>.</p>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="section" id="s5">
+    <h2>5. Immediate Data Deletion Request</h2>
+    <p>If you wish to request immediate, permanent deletion of your data without waiting for the 180-day recovery period, please contact us by email.</p>
+    <div class="contact-card">
+      <h3>Immediate Deletion Request</h3>
+      <p>Email: <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a></p>
+      <p>Subject Line: <strong>Immediate Data Deletion Request</strong></p>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="section" id="s6">
+    <h2>6. Related Documents</h2>
+    <p>For more detailed information regarding your data usage and legal terms, please review:</p>
+    <ul>
+      <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms &amp; Conditions</a></li>
+    </ul>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="section" id="s7">
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions or concerns regarding account deletion, data retention, or your privacy rights, please contact us:</p>
+    <div class="contact-card">
+      <h3>Get in touch</h3>
+      <p>We aim to respond to all privacy and account enquiries within 30 days.</p>
+      <p><a href="mailto:alignapps4@gmail.com">✉️ alignapps4@gmail.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Align. All rights reserved. &nbsp;·&nbsp;
+    <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="./terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
+    <a href="./account-deletion.html">Account Deletion</a>
+  </p>
+</footer>
+
+</body>
+</html>
