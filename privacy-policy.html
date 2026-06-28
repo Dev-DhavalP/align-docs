@@ -3,16 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Align</title>
+  <title>Privacy Policy — Align</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --brand:       #5856D6;
+      --brand-dark:  #3F3CCA;
+      --text-h:      #101828;
+      --text-p:      #374151;
+      --text-muted:  #6B7280;
+      --bg:          #F5F5FB;
+      --card:        #FFFFFF;
+      --border:      #E5E7EB;
+      --success:     #00A63E;
+      --radius:      14px;
+      --max-w:       780px;
+    }
+
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      color: #24292f;
-      background-color: #ffffff;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-p);
+      line-height: 1.7;
       font-size: 16px;
+      padding: 0 0 80px;
     }
 
     /* ── Header ─────────────────────────────────────────── */
@@ -38,202 +54,148 @@
       letter-spacing: -0.5px;
     }
 
-    /* ── Main Container ──────────────────────────────────── */
+    /* ── Layout ── */
     .container {
-      max-width: 720px;
+      max-width: var(--max-w);
       margin: 0 auto;
-      padding: 40px 24px 80px;
+      padding: 0 20px;
     }
 
-    /* ── Typography & Headings ───────────────────────────── */
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #0969da;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .last-updated {
-      font-size: 14px;
-      color: #57606a;
-      margin-bottom: 32px;
-      border-bottom: 1px solid #d0d7de;
-      padding-bottom: 16px;
-    }
-
-    h2 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #24292f;
-      margin-top: 32px;
-      margin-bottom: 16px;
-      border-bottom: 1px solid #d8dee4;
-      padding-bottom: 8px;
-    }
-
-    h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #24292f;
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      margin-bottom: 16px;
-      color: #24292f;
-    }
-
-    a {
-      color: #0969da;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ── Lists ───────────────────────────────────────────── */
-    ul, ol {
-      margin-bottom: 20px;
-      padding-left: 24px;
-    }
-
-    li {
-      margin-bottom: 8px;
-      color: #24292f;
-    }
-
-    /* ── Table of Contents ───────────────────────────────── */
+    /* ── TOC ── */
     .toc {
-      background-color: #f6f8fa;
-      border: 1px solid #d0d7de;
-      border-radius: 6px;
-      padding: 20px;
-      margin-bottom: 40px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0 28px;
     }
+    .toc h2 { font-size: 13px; font-weight: 700; color: var(--text-muted);
+              letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--brand); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
 
-    .toc h2 {
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #57606a;
-      margin-top: 0;
-      margin-bottom: 12px;
-      border-bottom: none;
-      padding-bottom: 0;
+    /* ── Section card ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px 28px;
+      margin-bottom: 16px;
     }
-
-    .toc ol {
-      list-style-type: decimal;
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .toc li {
-      margin-bottom: 6px;
-    }
-
-    .toc a {
-      font-size: 14px;
-      color: #0969da;
-    }
-
-    /* ── Tables ──────────────────────────────────────────── */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-size: 14px;
-    }
-
-    .data-table th, .data-table td {
-      border: 1px solid #d0d7de;
-      padding: 10px 12px;
-      text-align: left;
-    }
-
-    .data-table th {
-      background-color: #f6f8fa;
-      font-weight: 600;
-      color: #24292f;
-    }
-
-    .data-table tr:nth-child(even) {
-      background-color: #f6f8fa;
-    }
-
-    /* ── Note / Callout Boxes ────────────────────────────── */
-    .info-card {
-      background-color: #ddf4ff;
-      border-left: 4px solid #0969da;
-      padding: 16px;
-      margin: 24px 0;
-      font-size: 14px;
-      color: #0969da;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .info-card div {
-      color: #24292f;
-    }
-
-    /* ── Contact Section ─────────────────────────────────── */
-    .contact-card {
-      background-color: #f6f8fa;
-      border: 1px solid #d0d7de;
-      border-radius: 6px;
-      padding: 24px;
-      margin-top: 40px;
-    }
-
-    .contact-card h3 {
-      margin-top: 0;
-      color: #24292f;
-    }
-
-    .contact-card p {
-      font-size: 14px;
-      color: #57606a;
-      margin-bottom: 12px;
-    }
-
-    /* ── Footer ──────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid #d0d7de;
-      padding: 32px 24px;
-      text-align: center;
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      border-radius: 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
       font-size: 13px;
-      color: #57606a;
+      font-weight: 700;
+      color: var(--brand);
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-h);
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-h);
+      margin: 20px 0 8px;
+    }
+    p { margin-bottom: 12px; color: var(--text-p); font-size: 15px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; font-size: 15px; color: var(--text-p); }
+
+    /* ── Highlight boxes ── */
+    .info-box {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #1e40af;
+    }
+    .warn-box {
+      background: #FFF7ED;
+      border: 1px solid #FED7AA;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #92400e;
+    }
+    .success-box {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #14532d;
     }
 
-    footer p {
-      margin-bottom: 0;
-      color: #57606a;
+    /* ── Data table ── */
+    .data-table {
+      width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px;
     }
+    .data-table th {
+      background: var(--bg); color: var(--text-muted);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.6px;
+      text-transform: uppercase; padding: 10px 12px;
+      text-align: left; border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--border);
+      color: var(--text-p); vertical-align: top;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
 
-    footer a {
-      margin: 0 8px;
-      color: #57606a;
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, #3F3CCA 0%, #5856D6 100%);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      color: #fff;
+      margin-top: 28px;
     }
+    .contact-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .contact-card p { color: rgba(255,255,255,0.85); font-size: 15px; margin-bottom: 16px; }
+    .contact-card a {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff; text-decoration: none;
+      border-radius: 999px; padding: 10px 24px;
+      font-size: 14px; font-weight: 600;
+    }
+    .contact-card a:hover { background: rgba(255,255,255,0.25); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 20px 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--brand); text-decoration: none; }
 
     @media (max-width: 600px) {
-      header {
-        padding: 12px 16px;
-      }
-      .container {
-        padding: 24px 16px 60px;
-      }
-      h1 {
-        font-size: 26px;
-      }
-      .data-table {
-        font-size: 13px;
-        display: block;
-        overflow-x: auto;
-      }
+      header { padding: 36px 20px 32px; }
+      header h1 { font-size: 22px; }
+      .section { padding: 22px 18px; }
+      .toc { padding: 18px 18px; }
     }
   </style>
 </head>
@@ -266,212 +228,662 @@
 </header>
 
 <div class="container">
-  <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: June 3, 2026 &nbsp;·&nbsp; Effective: June 3, 2026</p>
+  <h1 style="font-size: 32px; font-weight: 700; color: var(--brand-dark); margin-top: 32px; margin-bottom: 8px; letter-spacing: -0.5px;">Privacy Policy</h1>
+  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 32px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">Version 2 &nbsp;·&nbsp; Effective: 25 June 2026</p>
 
-  <div class="info-card">
-    <div>This policy applies to the Align mobile application ("App") available on Android. By using Align, you agree to the practices described in this document. Please read it carefully.</div>
+  <!-- ── Intro ── -->
+  <div class="section" style="margin-top:32px;">
+    <p>
+      Welcome to <strong>Align</strong>. This Privacy Policy explains how we collect,
+      use, store, and protect your personal information when you use our app
+      ("Align", "we", "us", or "our"). By using Align you agree to the practices
+      described in this policy.
+    </p>
+    <div class="info-box">
+      <strong>Short version:</strong> We collect only what we need to run the app.
+      We do not sell your data. Gmail access is optional and read-only. You can
+      delete your account and all associated data at any time.
+    </div>
+    <p>
+      This policy applies to the Align Android application and all associated
+      backend services hosted on Supabase. It was last updated on
+      <strong>25 June 2026</strong>.
+    </p>
   </div>
 
-  <nav class="toc">
+  <!-- ── TOC ── -->
+  <div class="toc">
     <h2>Contents</h2>
     <ol>
       <li><a href="#s1">Information We Collect</a></li>
       <li><a href="#s2">How We Use Your Information</a></li>
-      <li><a href="#s3">Information Sharing</a></li>
-      <li><a href="#s4">Data Storage &amp; Security</a></li>
-      <li><a href="#s5">Data Retention</a></li>
-      <li><a href="#s6">Your Rights &amp; Choices</a></li>
+      <li><a href="#s3">Google Sign-In &amp; OAuth</a></li>
+      <li><a href="#s4">Gmail Smart Import (Pro Only)</a></li>
+      <li><a href="#s5">Financial Data You Enter</a></li>
+      <li><a href="#s6">Payment Processing</a></li>
       <li><a href="#s7">Push Notifications</a></li>
-      <li><a href="#s8">Children's Privacy</a></li>
-      <li><a href="#s9">Changes to This Policy</a></li>
-      <li><a href="#s10">Contact Us</a></li>
+      <li><a href="#s8">Analytics &amp; Export Reports</a></li>
+      <li><a href="#s9">Data Retention &amp; Deletion</a></li>
+      <li><a href="#s10">Data Security</a></li>
+      <li><a href="#s11">Third-Party Services</a></li>
+      <li><a href="#s12">Children's Privacy</a></li>
+      <li><a href="#s13">Your Rights</a></li>
+      <li><a href="#s14">International Users &amp; Multi-Currency</a></li>
+      <li><a href="#s15">Changes to This Policy</a></li>
+      <li><a href="#s16">Contact Us</a></li>
     </ol>
-  </nav>
+  </div>
 
-  <!-- Section 1 -->
+  <!-- ── §1 ── -->
   <div class="section" id="s1">
-    <h2>1. Information We Collect</h2>
-    <p>We collect the minimum information necessary to provide the Align service.</p>
+    <h2><span class="section-num">1</span>Information We Collect</h2>
 
-    <p><strong>Information you provide directly:</strong></p>
+    <h3>1.1 Account Information</h3>
+    <p>When you sign in with Google we receive:</p>
     <ul>
-      <li><strong>Account information</strong> - your name, email address, and profile photo provided through Google Sign-In.</li>
-      <li><strong>Reminder data</strong> - bill names, amounts, due dates, payment frequencies, categories, and notes you enter into the App.</li>
-      <li><strong>Payment information</strong> - subscription plan selections and transaction references processed through Razorpay. We do not store your payment card or UPI details directly.</li>
+      <li>Your name and email address</li>
+      <li>Your Google profile photo URL</li>
+      <li>A unique Google account identifier (sub)</li>
+    </ul>
+    <p>We do <strong>not</strong> store your Google password.</p>
+
+    <h3>1.2 Profile Preferences</h3>
+    <ul>
+      <li>Display currency preference (one of: INR, USD, EUR, GBP, JPY, CAD, AUD)</li>
+      <li>Payment currency used for Pro subscription</li>
+      <li>Preferred timezone (for notification scheduling)</li>
+      <li>App theme preference (Light, Dark, or Auto)</li>
+      <li>Language preference (currently English only)</li>
+      <li>Notification enabled/disabled toggle</li>
+      <li>Onboarding completion flag</li>
     </ul>
 
-    <p><strong>Information collected automatically:</strong></p>
+    <h3>1.3 Financial Data You Enter</h3>
+    <p>All financial data is entered manually by you or imported via Gmail (see §4):</p>
     <ul>
-      <li><strong>Device information</strong> - device model, operating system version, app version, and technical diagnostic information required for troubleshooting and security.</li>
-      <li><strong>Usage data</strong> - feature interactions, crash diagnostics, and performance metrics may be collected in aggregated or pseudonymised form to improve app reliability and user experience. We do not track individual browsing behaviour.</li>
-      <li><strong>Push notification tokens</strong> - device tokens required to deliver bill reminders to your device.</li>
+      <li>Expense reminders: title, amount, currency, category, due date, recurrence, notes</li>
+      <li>Income entries: title, amount, currency, source, date, recurrence, notes</li>
+      <li>Discretionary manual expenses: amount, category, date, notes</li>
+      <li>Payment history logs for each recurring or one-time entry</li>
     </ul>
 
-    <p><strong>Information we do NOT collect:</strong></p>
+    <h3>1.4 Device &amp; Technical Information</h3>
     <ul>
-      <li>Bank account numbers, credit card details, or UPI credentials.</li>
-      <li>Location data or GPS coordinates.</li>
-      <li>Contacts, photos, or files from your device.</li>
-      <li>Browsing history outside the App.</li>
+      <li>Expo push notification token (to deliver reminders)</li>
+      <li>Device timezone (used to schedule notifications at correct local time)</li>
+      <li>App version and build number (for debugging)</li>
     </ul>
+
+    <h3>1.5 Payment Information</h3>
+    <p>
+      Subscription payments are processed by <strong>Razorpay</strong>. We store
+      only non-sensitive payment metadata: Razorpay order ID, payment ID, plan type,
+      amount, and currency. We never store or transmit your card number, CVV,
+      or bank credentials.
+    </p>
   </div>
 
-  <!-- Section 2 -->
+  <!-- ── §2 ── -->
   <div class="section" id="s2">
-    <h2>2. How We Use Your Information</h2>
-    <p>We use the information we collect for the following purposes:</p>
-
+    <h2><span class="section-num">2</span>How We Use Your Information</h2>
     <table class="data-table">
       <thead>
-        <tr>
-          <th>Purpose</th>
-          <th>Legal Basis</th>
-        </tr>
+        <tr><th>Purpose</th><th>Data used</th><th>Legal basis</th></tr>
       </thead>
       <tbody>
-        <tr><td>Providing and operating the App (reminders, calendar, analytics)</td><td>Contract performance</td></tr>
-        <tr><td>Authenticating your account via Google Sign-In</td><td>Contract performance</td></tr>
-        <tr><td>Processing Pro plan subscription payments via Razorpay</td><td>Contract performance</td></tr>
-        <tr><td>Sending bill reminder push notifications to your device</td><td>Consent (you can withdraw anytime)</td></tr>
-        <tr><td>Responding to support enquiries</td><td>Legitimate interest</td></tr>
-        <tr><td>Improving App features and fixing bugs (anonymised data)</td><td>Legitimate interest</td></tr>
-        <tr><td>Complying with legal obligations</td><td>Legal obligation</td></tr>
+        <tr>
+          <td>Provide the app &amp; sync data across sessions</td>
+          <td>Account info, financial data</td>
+          <td>Contract performance</td>
+        </tr>
+        <tr>
+          <td>Send bill &amp; income reminder notifications</td>
+          <td>Push token, reminder schedule, timezone</td>
+          <td>Contract performance / consent</td>
+        </tr>
+        <tr>
+          <td>Process Pro subscription payments</td>
+          <td>Email, payment metadata, selected currency</td>
+          <td>Contract performance</td>
+        </tr>
+        <tr>
+          <td>Display analytics, charts &amp; CSV exports</td>
+          <td>All financial entries you created</td>
+          <td>Contract performance</td>
+        </tr>
+        <tr>
+          <td>Gmail Smart Import (optional, Pro only)</td>
+          <td>Gmail OAuth token, email snippets</td>
+          <td>Explicit consent</td>
+        </tr>
+        <tr>
+          <td>Enforce free-tier limits &amp; Pro plan rules</td>
+          <td>Plan status, entry counts</td>
+          <td>Contract performance</td>
+        </tr>
+        <tr>
+          <td>Improve app quality &amp; fix bugs</td>
+          <td>Anonymised technical logs</td>
+          <td>Legitimate interest</td>
+        </tr>
+        <tr>
+          <td>Automated data cleanup after account deletion</td>
+          <td>All stored data</td>
+          <td>Legal obligation &amp; contract</td>
+        </tr>
       </tbody>
     </table>
+    <p>
+      We do <strong>not</strong> use your data to serve advertisements. Align
+      is entirely ad-free.
+    </p>
   </div>
 
-  <!-- Section 3 -->
+  <!-- ── §3 ── -->
   <div class="section" id="s3">
-    <h2>3. Information Sharing</h2>
-    <p>We do not sell, trade, or rent your personal information. We share data only with the following trusted service providers who are contractually obligated to protect it:</p>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Service Provider</th>
-          <th>Purpose</th>
-          <th>Data Shared</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Supabase</strong></td><td>Database, authentication, cloud storage</td><td>Account data, reminder data</td></tr>
-        <tr><td><strong>Google</strong></td><td>Sign-In authentication</td><td>Name, email, profile photo</td></tr>
-        <tr><td><strong>Razorpay</strong></td><td>Payment processing</td><td>Payment amount, transaction reference</td></tr>
-        <tr><td><strong>Expo</strong></td><td>Push notification delivery</td><td>Device push token</td></tr>
-      </tbody>
-    </table>
-
-    <p>We may also disclose information if required by law, court order, or to protect the safety of our users or the public.</p>
+    <h2><span class="section-num">3</span>Google Sign-In &amp; OAuth</h2>
+    <p>
+      Align uses <strong>Google Sign-In</strong> as the only authentication method.
+      We request only the minimum OAuth scopes required:
+    </p>
+    <ul>
+      <li><code>openid</code> — verifies your identity</li>
+      <li><code>profile</code> — your name and photo</li>
+      <li><code>email</code> — your email address</li>
+    </ul>
+    <p>
+      The Gmail read scope (<code>gmail.readonly</code>) is a <em>separate, optional</em>
+      consent collected only inside the app when you choose to use Gmail Smart Import
+      (see §4). It is never requested during sign-in.
+    </p>
+    <p>
+      Your Google credentials are managed entirely by Google. Align receives only
+      a secure session token via Supabase Auth and never handles your Google password.
+    </p>
   </div>
 
-  <!-- Section 4 -->
+  <!-- ── §4 ── -->
   <div class="section" id="s4">
-    <h2>4. Data Storage &amp; Security</h2>
-    <p>Your data is stored on Supabase's secure cloud infrastructure. All data is encrypted in transit (TLS 1.2+) and at rest using AES-256 encryption.</p>
-    <p>We implement Row-Level Security (RLS) policies ensuring that each user can only access their own data. API keys and secrets are never stored in the App's source code.</p>
-    <p>The App also stores a local offline cache on your device using MMKV encrypted storage. This enables reminders and notifications to function without an internet connection.</p>
-    <p>Additionally, the App may rely on Google Play Services and related Google infrastructure to provide authentication, notifications, security, and device compatibility features.</p>
-    <div class="info-card">
-      <div>🔐 While we take reasonable precautions to protect your data, no method of electronic transmission or storage is 100% secure. We encourage you to use a strong Google account password and keep your device updated.</div>
+    <h2><span class="section-num">4</span>Gmail Smart Import (Pro Only)</h2>
+    <div class="warn-box">
+      <strong>Optional feature.</strong> Gmail Smart Import is available to Pro
+      subscribers only and requires your explicit in-app consent before any Gmail
+      access occurs. You can revoke access at any time.
+    </div>
+
+    <h3>What we access</h3>
+    <p>
+      When you grant Gmail access, Align reads a limited set of recent email
+      snippets (sender, subject, short body preview) to detect billing confirmations,
+      subscription renewals, and payment receipts. We request read-only access
+      (<code>gmail.readonly</code> scope) — we cannot send, delete, or modify emails.
+    </p>
+
+    <h3>What we extract</h3>
+    <ul>
+      <li>Provider or merchant name</li>
+      <li>Payment amount and currency</li>
+      <li>Due date or transaction date</li>
+      <li>Detected category (Subscriptions, Utilities, etc.)</li>
+      <li>Confidence score (high / medium)</li>
+    </ul>
+
+    <h3>What we do NOT store</h3>
+    <ul>
+      <li>Raw email body text — never stored after extraction</li>
+      <li>Email subjects or sender addresses beyond the scan session</li>
+      <li>Any email content that is not related to billing</li>
+    </ul>
+
+    <h3>How to revoke</h3>
+    <p>
+      Go to <strong>Settings → Smart Import → Disconnect Gmail</strong> in the app, or
+      visit <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      myaccount.google.com/permissions</a> and remove Align's access.
+    </p>
+
+    <div class="success-box">
+      Align's use of Gmail data complies with Google's
+      <a href="https://developers.google.com/terms/api-services-user-data-policy"
+         target="_blank" rel="noopener">API Services User Data Policy</a>,
+      including the Limited Use requirements.
     </div>
   </div>
 
-  <!-- Section 5 -->
+  <!-- ── §5 ── -->
   <div class="section" id="s5">
-    <h2>5. Data Retention</h2>
-    <p>We retain your data according to the following schedule to balance user control, privacy, and account history continuity:</p>
+    <h2><span class="section-num">5</span>Financial Data You Enter</h2>
+    <p>
+      All financial data in Align is entered by you. We store it securely in our
+      Supabase PostgreSQL database to sync your entries across sessions and provide
+      analytics, reminders, and reports.
+    </p>
 
+    <h3>Data categories stored</h3>
+    <ul>
+      <li>
+        <strong>Expense Reminders</strong> — title, amount, currency, category
+        (Subscriptions, Business, Card &amp; EMI, Insurance, Utility, Other),
+        due date, recurrence frequency, reminder settings, notes, payment history
+      </li>
+      <li>
+        <strong>Income Entries</strong> — title, amount, currency, source
+        (Salary, Freelance, Business, Rental, Other), date, recurrence, notes,
+        payment history
+      </li>
+      <li>
+        <strong>Manual Expenses</strong> — amount, currency, category, date, notes
+      </li>
+      <li>
+        <strong>Payment Logs</strong> — occurrence dates and amounts paid, linked
+        to parent reminder or income entry
+      </li>
+    </ul>
+
+    <h3>Multi-currency display</h3>
+    <p>
+      Align displays amounts in the currency you select for each entry.
+      We do not perform live currency conversion. Your profile stores a default
+      display currency preference used across the app.
+    </p>
+
+    <h3>Offline access</h3>
+    <p>
+      Align caches your data locally on your device using MMKV encrypted storage
+      so the app works when you are offline. Pending changes are queued and synced
+      to the server when connectivity is restored.
+    </p>
+  </div>
+
+  <!-- ── §6 ── -->
+  <div class="section" id="s6">
+    <h2><span class="section-num">6</span>Payment Processing</h2>
+    <p>
+      Align Pro subscriptions are processed through <strong>Razorpay</strong>, our
+      payment partner. Razorpay accepts the following currencies for V2:
+    </p>
+    <ul>
+      <li>Indian Rupee (INR)</li>
+      <li>US Dollar (USD)</li>
+      <li>Euro (EUR)</li>
+      <li>British Pound (GBP)</li>
+      <li>Japanese Yen (JPY)</li>
+      <li>Canadian Dollar (CAD)</li>
+      <li>Australian Dollar (AUD)</li>
+    </ul>
+
+    <h3>What Razorpay collects</h3>
+    <p>
+      Razorpay collects and processes your card or UPI details directly.
+      Align never receives, stores, or transmits raw payment instrument details
+      (card numbers, CVV, UPI PINs, or bank credentials).
+    </p>
+
+    <h3>What Align stores</h3>
+    <p>We store only the following non-sensitive payment metadata:</p>
+    <ul>
+      <li>Razorpay order ID and payment ID</li>
+      <li>Plan type (Quarterly or Yearly)</li>
+      <li>Amount charged and currency</li>
+      <li>Payment status and timestamp</li>
+    </ul>
+    <p>
+      This metadata is used to display your subscription history in
+      <strong>Settings → Plan Details</strong> and to verify Pro plan status.
+    </p>
+
+    <h3>Subscription plans</h3>
+    <p>Align Pro is available in two plans:</p>
+    <ul>
+      <li><strong>Quarterly</strong> — billed every 3 months</li>
+      <li><strong>Yearly</strong> — billed annually (best value)</li>
+    </ul>
+    <p>
+      Prices are fixed per currency and are not calculated using live exchange rates.
+      You can view pricing for your selected currency on the Sales screen.
+    </p>
+
+    <h3>Razorpay Privacy Policy</h3>
+    <p>
+      Razorpay's privacy practices are governed by their own policy:
+      <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">
+      razorpay.com/privacy</a>.
+    </p>
+  </div>
+
+  <!-- ── §7 ── -->
+  <div class="section" id="s7">
+    <h2><span class="section-num">7</span>Push Notifications</h2>
+    <p>
+      Align uses <strong>Expo Notifications</strong> to deliver bill reminders and
+      income alerts. Notifications are scheduled locally on your device based on:
+    </p>
+    <ul>
+      <li>Your configured reminder-before preferences (same day, 1 day, 3 days, 7 days)</li>
+      <li>Your selected reminder time (e.g. 9:00 AM)</li>
+      <li>Your account timezone (set in Settings → Timezone)</li>
+    </ul>
+
+    <h3>Permission</h3>
+    <p>
+      We request notification permission during onboarding. You can grant or deny
+      permission, and you can change this at any time in your device Settings.
+      If you deny permission, reminders are delivered only to the in-app
+      Notification Inbox.
+    </p>
+
+    <h3>Push token</h3>
+    <p>
+      Your Expo push token is stored in our database linked to your account and
+      the specific reminder it belongs to. It is used only to deliver your own
+      scheduled reminders. We do not use push tokens for marketing messages.
+    </p>
+
+    <h3>Disabling notifications</h3>
+    <p>
+      You can disable all notifications in <strong>Settings → Notifications</strong>.
+      Toggling this off cancels all scheduled local alarms. Notifications can be
+      re-enabled at any time.
+    </p>
+  </div>
+
+  <!-- ── §8 ── -->
+  <div class="section" id="s8">
+    <h2><span class="section-num">8</span>Analytics &amp; Export Reports</h2>
+    <p>
+      All analytics displayed in the Analytics tab and all CSV export reports are
+      generated entirely from <strong>your own financial data</strong> that you
+      entered into Align. We do not share this data with analytics services or
+      advertising platforms.
+    </p>
+
+    <h3>CSV Export (Pro only)</h3>
+    <p>
+      Pro subscribers can export their financial data as a CSV file covering up to
+      12 months. Exported files are generated on demand, delivered directly to your
+      device, and are not retained on our servers after delivery.
+    </p>
+
+    <h3>No third-party analytics SDKs</h3>
+    <p>
+      Align does not embed third-party analytics SDKs such as Firebase Analytics,
+      Mixpanel, Amplitude, or similar tools. We do not track your in-app behaviour
+      for marketing or advertising purposes.
+    </p>
+  </div>
+
+  <!-- ── §9 ── -->
+  <div class="section" id="s9">
+    <h2><span class="section-num">9</span>Data Retention &amp; Deletion</h2>
+
+    <h3>Active account</h3>
+    <p>
+      We retain your data for as long as your account is active and for a reasonable
+      period thereafter to allow you to reactivate.
+    </p>
+
+    <h3>Notification logs</h3>
+    <p>Notification logs are automatically deleted after <strong>90 days</strong>.</p>
+
+    <h3>Soft-deleted entries (Archive → Delete Permanently)</h3>
+    <p>
+      When you permanently delete a reminder or income entry, it is soft-deleted
+      (flagged as deleted) and hidden from the app immediately. The underlying
+      database record is retained for <strong>30 days</strong> for internal recovery
+      purposes, then permanently purged along with all related payment logs.
+    </p>
+
+    <h3>After Pro expiry or subscription cancellation</h3>
+    <ul>
+      <li>
+        Your data remains visible for <strong>180 days</strong> after your Pro
+        plan expires or your account is deactivated.
+      </li>
+      <li>
+        After 180 days your data is hidden from the app but retained in the
+        database for up to <strong>365 days</strong> to allow reactivation.
+      </li>
+      <li>
+        After 365 days, all reminders, payment logs, and notification logs
+        for your account are permanently purged from the database by an automated
+        nightly cleanup job.
+      </li>
+    </ul>
+
+    <h3>Account deletion</h3>
+    <p>
+      You can request full account deletion at any time from
+      <strong>Settings → Delete Account</strong> or by visiting:
+      <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html"
+         target="_blank" rel="noopener">
+      dev-dhavalp.github.io/align-docs/account-deletion.html</a>.
+    </p>
+    <p>
+      When you delete your account, we immediately mark your account as deactivated.
+      All personal data is permanently erased within <strong>30 days</strong>.
+      Payment transaction metadata may be retained for up to 7 years as required by
+      applicable financial recordkeeping laws.
+    </p>
+
+    <div class="info-box">
+      Our automated cleanup schedule runs nightly:
+      <br>• 1:00 AM — plan expiry sweep
+      <br>• 1:30 AM — inactive reminder archiving
+      <br>• 2:00 AM — permanent purge of soft-deleted and expired records
+    </div>
+  </div>
+
+  <!-- ── §10 ── -->
+  <div class="section" id="s10">
+    <h2><span class="section-num">10</span>Data Security</h2>
+    <ul>
+      <li>
+        <strong>Encryption in transit</strong> — All communication between the app
+        and our servers uses TLS 1.2 or higher (HTTPS).
+      </li>
+      <li>
+        <strong>Encryption at rest</strong> — Your data is stored in Supabase's
+        PostgreSQL database with encryption at rest enabled on the underlying
+        infrastructure.
+      </li>
+      <li>
+        <strong>Local storage</strong> — Data cached on your device is stored using
+        MMKV, which uses platform-level encryption (Android Keystore).
+      </li>
+      <li>
+        <strong>Row-level security</strong> — Supabase Row-Level Security (RLS)
+        policies ensure each user can only read and write their own data. No user
+        can access another user's records.
+      </li>
+      <li>
+        <strong>Auth tokens</strong> — Supabase manages session tokens using
+        secure JWT-based authentication. Refresh tokens are rotated automatically.
+      </li>
+      <li>
+        <strong>Webhook verification</strong> — Razorpay payment webhooks are
+        verified using cryptographic signature checks to prevent payload forgery.
+      </li>
+      <li>
+        <strong>ReDoS protection</strong> — Regular expressions used in Gmail email
+        parsing use bounded quantifiers to prevent event-loop blocking attacks.
+      </li>
+      <li>
+        <strong>No third-party data brokers</strong> — We do not share, sell, or
+        rent your personal data to any third party for commercial purposes.
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── §11 ── -->
+  <div class="section" id="s11">
+    <h2><span class="section-num">11</span>Third-Party Services</h2>
     <table class="data-table">
       <thead>
         <tr>
-          <th>Data Type</th>
-          <th>Retention Period</th>
-          <th>Future Sign-In Restore Behavior</th>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Data shared</th>
+          <th>Privacy policy</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Reminder &amp; Notification Data</strong> (bill names, amounts, due dates, reminder days, notes, push tokens, notification logs)</td>
-          <td>Retained for up to <strong>180 days</strong> following account deactivation (deletion) request or downgrade from Pro to Free plan, then permanently and automatically removed from the database server.</td>
-          <td><strong>Not restored</strong> if 180 days have passed. If signed in again within 180 days, this data is restored.</td>
+          <td><strong>Supabase</strong></td>
+          <td>Database, authentication, edge functions</td>
+          <td>All app data</td>
+          <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
         </tr>
         <tr>
-          <td><strong>Profile &amp; Payment Data</strong> (user profile details, email address, payment records, transaction history, and subscription history)</td>
-          <td>Retained for up to <strong>8 years</strong>, or longer if required by applicable tax, accounting, fraud prevention, legal, regulatory, or security obligations.</td>
-          <td><strong>Fully restored</strong> and displayed immediately upon subsequent sign-ins.</td>
+          <td><strong>Google OAuth</strong></td>
+          <td>Sign-in authentication</td>
+          <td>Name, email, photo URL</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Gmail API</strong></td>
+          <td>Smart Import — billing email scanning (optional, Pro)</td>
+          <td>Read-only email snippets (not stored)</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Razorpay</strong></td>
+          <td>Payment processing for Pro subscriptions</td>
+          <td>Email, plan, amount, currency</td>
+          <td><a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">razorpay.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Expo</strong></td>
+          <td>Push notification delivery</td>
+          <td>Push token, notification payload</td>
+          <td><a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a></td>
         </tr>
       </tbody>
     </table>
-
-    <p>After an account deactivation and deletion request, personal data that is no longer required for these purposes will be permanently deleted or anonymized in accordance with applicable laws and business requirements. Retained records will be stored securely and used only for the purposes described in this Privacy Policy.</p>
+    <p>
+      Align does not use advertising networks, social media tracking pixels,
+      or analytics data brokers.
+    </p>
   </div>
 
-  <!-- Section 6 -->
-  <div class="section" id="s6">
-    <h2>6. Your Rights &amp; Choices</h2>
-    <p>You have the following rights regarding your personal data:</p>
+  <!-- ── §12 ── -->
+  <div class="section" id="s12">
+    <h2><span class="section-num">12</span>Children's Privacy</h2>
+    <p>
+      Align is not directed at or intended for use by children under the age of
+      <strong>13 years</strong> (or the applicable age of digital consent in your
+      jurisdiction). We do not knowingly collect personal information from children.
+    </p>
+    <p>
+      If you believe a child has provided personal information through Align,
+      please contact us at
+      <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>
+      and we will promptly delete the information.
+    </p>
+  </div>
+
+  <!-- ── §13 ── -->
+  <div class="section" id="s13">
+    <h2><span class="section-num">13</span>Your Rights</h2>
+    <p>
+      Depending on your country or region, you may have the following rights
+      regarding your personal data:
+    </p>
     <ul>
-      <li><strong>Access</strong> - Request a copy of the personal data we hold about you.</li>
-      <li><strong>Correction</strong> - Request correction of inaccurate or incomplete data.</li>
-      <li><strong>Deactivation &amp; Deletion</strong> &ndash; Users may initiate the account deletion process through Account &rarr; Deactivate Account in the App. Upon request, the account is immediately deactivated and enters a 180-day recovery period. If you do not sign in again during this 180-day period, reminder and notification data are permanently deleted. Certain payment records, transaction references, and other information required for legal, accounting, fraud prevention, regulatory, or security purposes may be retained for up to 8 years or as otherwise required by applicable law.</li>
-      <li><strong>Portability</strong> - Export your reminder data as a CSV file via the Analytics → Export Report feature (Pro users).</li>
-      <li><strong>Withdraw consent</strong> - Disable push notifications at any time via your device settings or Account → Notification Preferences.</li>
-      <li><strong>Object</strong> - Object to processing of your data for legitimate interest purposes.</li>
+      <li>
+        <strong>Access</strong> — Request a copy of the personal data we hold about you.
+      </li>
+      <li>
+        <strong>Correction</strong> — Ask us to correct inaccurate or incomplete data.
+      </li>
+      <li>
+        <strong>Deletion</strong> — Request deletion of your account and associated data
+        (see §9 and our
+        <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html"
+           target="_blank" rel="noopener">Account Deletion page</a>).
+      </li>
+      <li>
+        <strong>Portability</strong> — Pro users can export their financial data at any
+        time as a CSV file from the Export Reports screen.
+      </li>
+      <li>
+        <strong>Withdraw consent</strong> — You can revoke Gmail access at any time
+        (see §4). You can disable notifications at any time (see §7).
+      </li>
+      <li>
+        <strong>Object</strong> — Object to processing of your data where we rely on
+        legitimate interest as the legal basis.
+      </li>
     </ul>
-    <p>To exercise any of these rights, contact us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>. We will respond within 30 days.</p>
+    <p>
+      To exercise any of these rights, email us at
+      <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>.
+      We will respond within 30 days.
+    </p>
   </div>
 
-  <!-- Section 7 -->
-  <div class="section" id="s7">
-    <h2>7. Push Notifications</h2>
-    <p>Align uses push notifications to deliver bill reminders directly to your device. Notifications are scheduled locally on your device and can fire without an internet connection.</p>
-    <p>You can control notifications at any time:</p>
+  <!-- ── §14 ── -->
+  <div class="section" id="s14">
+    <h2><span class="section-num">14</span>International Users &amp; Multi-Currency</h2>
+    <p>
+      Align V2 is available globally. Your data is stored on Supabase infrastructure
+      which may be hosted in data centers outside your home country. By using Align
+      you consent to the transfer and processing of your data in accordance with
+      this Privacy Policy.
+    </p>
+    <p>
+      Align displays financial amounts in your chosen currency (INR, USD, EUR, GBP,
+      JPY, CAD, or AUD). <strong>No live currency conversion is performed.</strong>
+      Currency symbols are used for display purposes only. The app stores amounts
+      as entered by you in whatever currency you select for each entry.
+    </p>
+    <p>
+      Subscription pricing is fixed per currency and is not calculated using live
+      exchange rates. Your selected payment currency is stored in your profile and
+      used consistently for all billing.
+    </p>
+  </div>
+
+  <!-- ── §15 ── -->
+  <div class="section" id="s15">
+    <h2><span class="section-num">15</span>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in
+      the app, our practices, or applicable law. When we make material changes,
+      we will:
+    </p>
     <ul>
-      <li>Via <strong>Account → Notification Preferences</strong> in the App.</li>
-      <li>Via your device's <strong>Settings → Apps → Align → Notifications</strong>.</li>
+      <li>Update the "Effective date" at the top of this page</li>
+      <li>Display an in-app notice or banner informing you of the update</li>
     </ul>
-    <p>Disabling notifications does not affect your reminder data stored in the App. Your Notification Inbox continues to show all notifications regardless of device permission status.</p>
+    <p>
+      We encourage you to review this policy periodically. Continued use of Align
+      after changes are posted constitutes acceptance of the updated policy.
+    </p>
   </div>
 
-  <!-- Section 8 -->
-  <div class="section" id="s8">
-    <h2>8. Children's Privacy</h2>
-    <p>Align is not directed at individuals under 13 years of age (or the minimum age required by local law). We do not knowingly collect personal information from children under this age. If you believe a child has provided us with personal information, please contact us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> and we will promptly delete it.</p>
+  <!-- ── §16 Contact ── -->
+  <div class="contact-card" id="s16">
+    <h2>Questions or Concerns?</h2>
+    <p>
+      If you have any questions about this Privacy Policy or how we handle your data,
+      please reach out — we're happy to help.
+    </p>
+    <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>
   </div>
 
-  <!-- Section 9 -->
-  <div class="section" id="s9">
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. When we make material changes, we will:</p>
-    <ul>
-      <li>Update the "Last updated" date at the top of this page.</li>
-      <li>Notify you via an in-app notification.</li>
-      <li>For significant changes, request your renewed consent where required by law.</li>
-    </ul>
-    <p>Continued use of the App after changes become effective constitutes acceptance of the updated policy.</p>
-  </div>
+  <!-- ── Footer ── -->
+  <footer>
+    <p>
+      &copy; 2026 Align &nbsp;·&nbsp;
+      <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="https://dev-dhavalp.github.io/align-docs/terms.html">Terms &amp; Conditions</a>
+      &nbsp;·&nbsp;
+      <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html">Delete Account</a>
+    </p>
+    <p style="margin-top:8px;">Version 2 &nbsp;·&nbsp; Last updated 25 June 2026</p>
+  </footer>
 
-  <!-- Section 10 -->
-  <div class="section" id="s10">
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
-
-    <div class="contact-card">
-      <h3>Get in touch</h3>
-      <p>We aim to respond to all privacy enquiries within 30 days.</p>
-      <p><a href="mailto:alignapps4@gmail.com">✉️ alignapps4@gmail.com</a></p>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <p>© 2026 Align. All rights reserved. &nbsp;·&nbsp;
-    <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="./terms.html">Terms &amp; Conditions</a>
-  </p>
-</footer>
-
+</div><!-- /container -->
 </body>
 </html>
