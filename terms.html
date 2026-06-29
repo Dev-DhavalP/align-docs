@@ -3,646 +3,877 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms &amp; Conditions - Align</title>
+  <title>Terms of Service — Align</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      color: #24292f;
-      background-color: #ffffff;
-      line-height: 1.6;
-      font-size: 16px;
+    body { font-family: system-ui, -apple-system, sans-serif; color: #24292f; background-color: #ffffff; line-height: 1.6; font-size: 16px; }
+    header { background: #ffffff; border-bottom: 1px solid #d0d7de; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+    .logo { display: flex; align-items: center; justify-content: center; }
+    .logo-text { font-size: 20px; font-weight: 700; color: #24292f; letter-spacing: -0.5px; }
+    
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 32px; font-weight: 700; color: #0969da; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .last-updated { font-size: 14px; color: #57606a; margin-bottom: 32px; border-bottom: 1px solid #d0d7de; padding-bottom: 16px; }
+    
+    .section { margin-bottom: 32px; border-bottom: 1px solid #d8dee4; padding-bottom: 24px; }
+    .section:last-of-type { border-bottom: none; }
+    
+    .section-num {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 8px;
+      background: #f6f8fa; border: 1px solid #d0d7de;
+      font-size: 13px; font-weight: 700; color: #0969da;
+      margin-right: 10px; flex-shrink: 0;
     }
-
-    /* ── Header ─────────────────────────────────────────── */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #d0d7de;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    
+    h2 { font-size: 20px; font-weight: 600; color: #24292f; margin-top: 32px; margin-bottom: 16px; display: flex; align-items: center; }
+    h3 { font-size: 16px; font-weight: 600; color: #24292f; margin-top: 20px; margin-bottom: 8px; }
+    p { margin-bottom: 16px; color: #24292f; }
+    a { color: #0969da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { margin-bottom: 20px; padding-left: 24px; }
+    li { margin-bottom: 8px; color: #24292f; }
+    
+    .toc { background-color: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 20px; margin-bottom: 40px; }
+    .toc h2 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #57606a; margin-top: 0; margin-bottom: 12px; border-bottom: none; padding-bottom: 0; }
+    .toc ol { list-style-type: decimal; padding-left: 20px; margin-bottom: 0; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { font-size: 14px; color: #0969da; }
+    
+    /* Box styles matching GitHub-style alerts */
+    .info-box {
+      background-color: #ddf4ff; border-left: 4px solid #0969da; padding: 16px; margin: 24px 0;
+      font-size: 14px; color: #24292f; border-radius: 0 6px 6px 0;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .warn-box {
+      background-color: #fff8c5; border-left: 4px solid #9a6700; padding: 16px; margin: 24px 0;
+      font-size: 14px; color: #24292f; border-radius: 0 6px 6px 0;
     }
-
-    .logo-text {
-      font-size: 20px;
-      font-weight: 700;
-      color: #24292f;
-      letter-spacing: -0.5px;
+    .error-box {
+      background-color: #ffebe9; border-left: 4px solid #cf222e; padding: 16px; margin: 24px 0;
+      font-size: 14px; color: #24292f; border-radius: 0 6px 6px 0;
     }
-
-    /* ── Main Container ──────────────────────────────────── */
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
+    .success-box {
+      background-color: #dafbe1; border-left: 4px solid #1a7f37; padding: 16px; margin: 24px 0;
+      font-size: 14px; color: #24292f; border-radius: 0 6px 6px 0;
     }
-
-    /* ── Typography & Headings ───────────────────────────── */
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #0969da;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .last-updated {
-      font-size: 14px;
-      color: #57606a;
-      margin-bottom: 32px;
-      border-bottom: 1px solid #d0d7de;
-      padding-bottom: 16px;
-    }
-
-    h2 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #24292f;
-      margin-top: 32px;
-      margin-bottom: 16px;
-      border-bottom: 1px solid #d8dee4;
-      padding-bottom: 8px;
-    }
-
-    h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #24292f;
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      margin-bottom: 16px;
-      color: #24292f;
-    }
-
-    a {
-      color: #0969da;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ── Lists ───────────────────────────────────────────── */
-    ul, ol {
-      margin-bottom: 20px;
-      padding-left: 24px;
-    }
-
-    li {
-      margin-bottom: 8px;
-      color: #24292f;
-    }
-
-    /* ── Table of Contents ───────────────────────────────── */
-    .toc {
-      background-color: #f6f8fa;
-      border: 1px solid #d0d7de;
-      border-radius: 6px;
-      padding: 20px;
-      margin-bottom: 40px;
-    }
-
-    .toc h2 {
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #57606a;
-      margin-top: 0;
-      margin-bottom: 12px;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .toc ol {
-      list-style-type: decimal;
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .toc li {
-      margin-bottom: 6px;
-    }
-
-    .toc a {
-      font-size: 14px;
-      color: #0969da;
-    }
-
-    /* ── Tables ──────────────────────────────────────────── */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-size: 14px;
-    }
-
-    .data-table th, .data-table td {
-      border: 1px solid #d0d7de;
-      padding: 10px 12px;
-      text-align: left;
-    }
-
-    .data-table th {
-      background-color: #f6f8fa;
-      font-weight: 600;
-      color: #24292f;
-    }
-
-    .data-table tr:nth-child(even) {
-      background-color: #f6f8fa;
-    }
-
-    /* ── Note / Callout Boxes ────────────────────────────── */
-    .info-card {
-      background-color: #ddf4ff;
-      border-left: 4px solid #0969da;
-      padding: 16px;
-      margin: 24px 0;
-      font-size: 14px;
-      color: #0969da;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .info-card div {
-      color: #24292f;
-    }
-
-    .warning-card {
-      background-color: #fff8c5;
-      border-left: 4px solid #9a6700;
-      padding: 16px;
-      margin: 24px 0;
-      font-size: 14px;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .warning-card div {
-      color: #24292f;
-    }
-
-    /* ── Contact Section ─────────────────────────────────── */
-    .contact-card {
-      background-color: #f6f8fa;
-      border: 1px solid #d0d7de;
-      border-radius: 6px;
-      padding: 24px;
-      margin-top: 40px;
-    }
-
-    .contact-card h3 {
-      margin-top: 0;
-      color: #24292f;
-    }
-
-    .contact-card p {
-      font-size: 14px;
-      color: #57606a;
-      margin-bottom: 12px;
-    }
-
-    /* ── Footer ──────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid #d0d7de;
-      padding: 32px 24px;
-      text-align: center;
-      font-size: 13px;
-      color: #57606a;
-    }
-
-    footer a {
-      color: #0969da;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* ── Responsive ──────────────────────────────────────── */
+    
+    /* Feature comparison table */
+    .feat-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .feat-table th, .feat-table td { border: 1px solid #d0d7de; padding: 10px 12px; text-align: left; }
+    .feat-table th { background-color: #f6f8fa; font-weight: 600; color: #24292f; }
+    .feat-table tr:nth-child(even) { background-color: #f6f8fa; }
+    
+    .check { color: #1a7f37; font-weight: 600; }
+    .cross { color: #cf222e; font-weight: 600; }
+    .limited { color: #9a6700; font-weight: 600; }
+    
+    /* Pricing layout */
+    .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .price-card { border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; background: #f6f8fa; }
+    .price-card.featured { border-color: #0969da; background: #ddf4ff; }
+    .price-card .plan-name { font-size: 13px; font-weight: 700; color: #57606a; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .price-card.featured .plan-name { color: #0969da; }
+    .price-card .plan-label { font-size: 11px; color: #0969da; font-weight: 600; margin-bottom: 8px; }
+    .price-card .currencies { font-size: 13px; color: #24292f; line-height: 1.9; }
+    
+    .contact-card { background-color: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 24px; margin-top: 40px; }
+    .contact-card h2 { margin-top: 0; color: #24292f; font-size: 18px; border-bottom: none; padding-bottom: 0; }
+    .contact-card p { font-size: 14px; color: #57606a; margin-bottom: 12px; }
+    
+    footer { border-top: 1px solid #d0d7de; padding: 32px 24px; text-align: center; font-size: 13px; color: #57606a; margin-top: 60px; }
+    footer a { color: #0969da; }
+    footer a:hover { text-decoration: underline; }
+    
     @media (max-width: 600px) {
-      h1 { font-size: 24px; }
-      h2 { font-size: 18px; }
+      h1 { font-size: 24px; } h2 { font-size: 18px; }
       .container { padding: 24px 16px 60px; }
-      .data-table { font-size: 13px; }
-      .data-table th, .data-table td { padding: 8px 10px; }
+      .price-grid { grid-template-columns: 1fr; }
     }
-  </style>
+</style>
 </head>
 <body>
-
 <header>
-  <div class="logo">
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_18488_4425)">
-        <path d="M36 11.9531H0V5.97656C0 2.68976 2.6131 0 5.80593 0H30.1941C33.3869 0 36 2.68976 36 5.97656V11.9531Z" fill="#34C759"/>
-        <path d="M36 17.0508H0V11.0736C0 7.78646 2.6131 5.09766 5.80593 5.09766H30.1941C33.3869 5.09766 36 7.78646 36 11.0736V17.0508Z" fill="#FFCC00"/>
-        <path d="M36 25.3125H0V16.1719C0 12.8851 2.6131 10.1953 5.80593 10.1953H30.1941C33.3869 10.1953 36 12.8851 36 16.1719V25.3125Z" fill="#5856D6"/>
-        <path d="M36.0011 29.3906L0.00110073 29.3906L-2.28785e-05 25.664C-0.400583 22.4017 1.90041 19.3997 5.06943 19.0106L29.6247 15.9956C32.7938 15.6065 35.6005 17.9721 36.0011 21.2344L36.0011 29.3906Z" fill="#EBE9E0"/>
-        <path d="M36 29.3203H0V30.0234C0 33.3102 2.6131 36 5.80593 36H30.1941C33.3869 36 36 33.3102 36 30.0234V29.3203Z" fill="#EBE9E0"/>
-        <path d="M28.053 19.211C27.9715 19.2239 27.8916 19.2374 27.8132 19.2509L27.5839 19.2937L27.4729 19.3163L27.2584 19.3633L27.0544 19.4133C25.2927 19.8701 24.68 20.7134 24.7899 22.53L24.8055 22.7395L24.827 22.958C24.831 22.9949 24.835 23.0326 24.8399 23.0706L24.87 23.3019L24.8874 23.421L24.9062 23.5422C24.9191 23.6237 24.9325 23.7036 24.9461 23.782L24.9889 24.0113L25.0115 24.1223L25.0585 24.3368L25.1084 24.5408C25.5653 26.3025 26.4086 26.9152 28.2251 26.8053L28.4346 26.7897L28.6531 26.7682C28.6901 26.7642 28.7278 26.7602 28.7657 26.7553L28.997 26.7252L29.2374 26.689L29.4771 26.6492L29.7064 26.6063L29.8175 26.5837L30.0319 26.5367L30.236 26.4868C31.9976 26.0299 32.6103 25.1867 32.5004 23.3701L32.4849 23.1606L32.4633 22.9421C32.4594 22.9051 32.4553 22.8674 32.4505 22.8295L32.4203 22.5982L32.3842 22.3578L32.3443 22.1181L32.3015 21.8888L32.2789 21.7777L32.2319 21.5633L32.1819 21.3592C31.7251 19.5976 30.8818 18.9849 29.0652 19.0948L28.8557 19.1103L28.6372 19.1319C28.5997 19.136 28.5621 19.1403 28.5246 19.1447L28.2933 19.1749L28.1742 19.1922L28.053 19.211Z" fill="url(#paint0_linear_18488_4425)"/>
-        <path d="M29.3422 21.8019C29.3988 21.7242 29.4829 21.671 29.5774 21.653C29.6719 21.6351 29.7697 21.6538 29.8509 21.7053C29.9321 21.7569 29.9907 21.8374 30.0146 21.9305C30.0386 22.0237 30.0263 22.1224 29.9801 22.2068L29.9546 22.2469L28.6959 23.9793C28.6417 24.0539 28.5621 24.1062 28.4722 24.1263C28.3822 24.1464 28.288 24.133 28.2072 24.0885L28.1672 24.0631L27.3009 23.4337C27.2232 23.3771 27.17 23.2929 27.152 23.1984C27.1341 23.1039 27.1528 23.0062 27.2043 22.925C27.2559 22.8438 27.3364 22.7852 27.4295 22.7612C27.5227 22.7372 27.6215 22.7496 27.7058 22.7958L27.7459 22.8213L28.3059 23.2278L29.3422 21.8019Z" fill="white"/>
-        </g>
-        <defs>
-        <linearGradient id="paint0_linear_18488_4425" x1="28.053" y1="19.211" x2="29.2374" y2="26.689" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#5EC6F5"/>
-        <stop offset="1" stop-color="#007AFF"/>
-        </linearGradient>
-        <clipPath id="clip0_18488_4425">
-        <rect width="36" height="36" rx="6" fill="white"/>
-        </clipPath>
-        </defs>
-    </svg>
-  </div>
+  <div class="logo"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#c)">
+        <path d="M36 11.95H0V5.98C0 2.69 2.61 0 5.81 0h24.38C33.39 0 36 2.69 36 5.98v5.97z" fill="#34C759"/>
+        <path d="M36 17.05H0v-5.98C0 7.79 2.61 5.1 5.81 5.1h24.38C33.39 5.1 36 7.79 36 11.07v5.98z" fill="#FFCC00"/>
+        <path d="M36 25.31H0V16.17C0 12.89 2.61 10.2 5.81 10.2h24.38C33.39 10.2 36 12.89 36 16.17v9.14z" fill="#5856D6"/>
+        <path d="M36 29.39H0v-3.73C-.4 22.4 1.9 19.4 5.07 19.01l24.55-3.01C32.79 15.61 35.6 17.97 36 21.23v8.16z" fill="#EBE9E0"/>
+        <path d="M36 29.32H0v.7C0 33.31 2.61 36 5.81 36h24.38C33.39 36 36 33.31 36 30.02v-.7z" fill="#EBE9E0"/>
+      </g>
+      <defs><clipPath id="c"><rect width="36" height="36" rx="6" fill="white"/></clipPath></defs>
+    </svg></div>
   <span class="logo-text">align</span>
 </header>
 
 <div class="container">
+  <h1>Terms of Service</h1>
+  <p class="last-updated">Version 2 &nbsp;&middot;&nbsp; Effective 25 June 2026 &nbsp;&middot;&nbsp; Distributed via Google Play Store</p>
 
-  <h1>Terms &amp; Conditions</h1>
-  <p class="last-updated">Last updated: June 3, 2026 &nbsp;·&nbsp; Effective: June 3, 2026</p>
-
-  <div class="info-card">
-    <div>These Terms &amp; Conditions ("Terms") govern your use of the Align mobile application ("App") developed and operated by Align ("we", "us", or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, please do not use the App.</div>
+  <div class="intro-banner">
+    <p>
+      Please read these Terms of Service ("Terms") carefully before using the
+      <strong>Align</strong> mobile application ("App", "Service", "we", "us", or "our").
+      By downloading, installing, or using the App you agree to be bound by these Terms.
+      If you do not agree, please do not use the App.
+    </p>
+    <div class="info-box">
+      <strong>Short version:</strong> Align is a personal finance tool. Your data belongs
+      to you. Free plan has entry limits. Pro plan unlocks all features. Subscriptions
+      are billed through Razorpay. You may cancel at any time from the Play Store.
+    </div>
+    <p>
+      These Terms were last updated on <strong>25 June 2026</strong> and apply to
+      Align Version 2 (App Version 2.0.0+) distributed via the Google Play Store.
+    </p>
   </div>
 
-  <nav class="toc">
+  <!-- ── TOC ── -->
+  <div class="toc">
     <h2>Contents</h2>
     <ol>
       <li><a href="#s1">Acceptance of Terms</a></li>
-      <li><a href="#s2">Eligibility</a></li>
-      <li><a href="#s3">Account Registration &amp; Security</a></li>
-      <li><a href="#s4">Free &amp; Pro Plans</a></li>
-      <li><a href="#s5">Payments, Billing &amp; Refunds</a></li>
-      <li><a href="#s6">Subscription Cancellation &amp; Downgrade</a></li>
-      <li><a href="#s7">Account Deactivation &amp; Deletion</a></li>
-      <li><a href="#s8">Data Retention</a></li>
-      <li><a href="#s9">Acceptable Use</a></li>
-      <li><a href="#s10">Intellectual Property</a></li>
-      <li><a href="#s11">Disclaimer of Warranties</a></li>
-      <li><a href="#s12">Limitation of Liability</a></li>
-      <li><a href="#s13">Indemnification</a></li>
-      <li><a href="#s14">Third-Party Services</a></li>
-      <li><a href="#s15">Governing Law &amp; Disputes</a></li>
-      <li><a href="#s16">Changes to These Terms</a></li>
-      <li><a href="#s17">Contact Us</a></li>
+      <li><a href="#s2">Eligibility &amp; Account</a></li>
+      <li><a href="#s3">Description of Service</a></li>
+      <li><a href="#s4">Free Plan &amp; Limitations</a></li>
+      <li><a href="#s5">Align Pro — Subscription Plans &amp; Pricing</a></li>
+      <li><a href="#s6">Payment, Billing &amp; Currency</a></li>
+      <li><a href="#s7">Cancellation &amp; Refunds</a></li>
+      <li><a href="#s8">Pro Plan Expiry &amp; Grace Period</a></li>
+      <li><a href="#s9">Account Deactivation &amp; Deletion</a></li>
+      <li><a href="#s10">Data Ownership &amp; Privacy</a></li>
+      <li><a href="#s11">Gmail Smart Import (Optional, Pro Only)</a></li>
+      <li><a href="#s12">Push Notifications</a></li>
+      <li><a href="#s13">Intellectual Property</a></li>
+      <li><a href="#s14">Prohibited Uses</a></li>
+      <li><a href="#s15">Disclaimers &amp; Limitation of Liability</a></li>
+      <li><a href="#s16">Indemnification</a></li>
+      <li><a href="#s17">Governing Law</a></li>
+      <li><a href="#s18">Changes to These Terms</a></li>
+      <li><a href="#s19">Contact</a></li>
     </ol>
-  </nav>
+  </div>
 
-  <!-- Section 1 -->
+  <!-- ── §1 ── -->
   <div class="section" id="s1">
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing or using the Align App, you confirm that you have read, understood, and agree to be bound by these Terms, together with our <a href="./privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
-    <p>These Terms constitute a legally binding agreement between you and Align. If you are using the App on behalf of an organisation, you represent that you have authority to bind that organisation to these Terms.</p>
+    <h2><span class="section-num">1</span>Acceptance of Terms</h2>
+    <p>
+      By creating an account, signing in with Google, or otherwise accessing Align,
+      you confirm that you have read, understood, and agree to be bound by these Terms
+      and our <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html">
+      Privacy Policy</a>, which is incorporated herein by reference.
+    </p>
+    <p>
+      If you are using Align on behalf of an organisation, you represent that you have
+      authority to bind that organisation to these Terms.
+    </p>
   </div>
 
-  <!-- Section 2 -->
+  <!-- ── §2 ── -->
   <div class="section" id="s2">
-    <h2>2. Eligibility</h2>
-    <p>You must be at least 13 years of age (or the minimum age required by applicable law in your country) to use Align. By using the App, you represent and warrant that you meet this requirement.</p>
-    <p>If you are between 13 and 18 years of age, you must have obtained consent from a parent or legal guardian to use the App. The App is primarily designed for individuals managing personal or business financial reminders and is not intended for children.</p>
+    <h2><span class="section-num">2</span>Eligibility &amp; Account</h2>
+
+    <h3>2.1 Age requirement</h3>
+    <p>
+      You must be at least <strong>13 years old</strong> (or the applicable minimum
+      digital age in your jurisdiction) to use Align. By using the App you represent
+      that you meet this requirement.
+    </p>
+
+    <h3>2.2 Google Sign-In</h3>
+    <p>
+      Align uses <strong>Google Sign-In</strong> as the only authentication method.
+      You are responsible for maintaining the security of your Google account.
+      We are not liable for any loss resulting from unauthorised access to your account.
+    </p>
+
+    <h3>2.3 One account per user</h3>
+    <p>
+      Each Google account may be associated with one Align account. Creating multiple
+      accounts to circumvent free-tier limits is prohibited and may result in
+      suspension of all associated accounts.
+    </p>
+
+    <h3>2.4 Accurate information</h3>
+    <p>
+      You agree to provide accurate information when prompted (e.g. timezone, currency
+      preference) and to keep this information current.
+    </p>
   </div>
 
-  <!-- Section 3 -->
+  <!-- ── §3 ── -->
   <div class="section" id="s3">
-    <h2>3. Account Registration &amp; Security</h2>
-    <p>To use Align, you must sign in using a valid Google account. By doing so, you grant Align access to your Google profile information (name, email address, and profile photo) as described in our <a href="./privacy-policy.html">Privacy Policy</a>.</p>
-    <p>You are responsible for:</p>
+    <h2><span class="section-num">3</span>Description of Service</h2>
+    <p>
+      Align is a personal finance and reminder management application that allows you to:
+    </p>
     <ul>
-      <li>Maintaining the security and confidentiality of your Google account credentials.</li>
-      <li>All activity that occurs under your Align account.</li>
-      <li>Notifying us immediately at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> if you suspect any unauthorised access to your account.</li>
+      <li>Create and manage <strong>Expense Reminders</strong> for recurring and one-time bills</li>
+      <li>Track <strong>Income entries</strong> from salary, freelance, rental, business, and other sources</li>
+      <li>Log <strong>manual discretionary expenses</strong></li>
+      <li>View a <strong>monthly calendar</strong> of all financial activity</li>
+      <li>Analyse spending and income with <strong>interactive analytics charts</strong> (Pro)</li>
+      <li>Import billing emails from Gmail using <strong>Smart Import</strong> (Pro)</li>
+      <li>Export financial data as <strong>CSV reports</strong> (Pro)</li>
+      <li>Receive <strong>push notification reminders</strong> before due dates</li>
     </ul>
-    <p>Align reserves the right to suspend or terminate accounts that are found to be used fraudulently, abusively, or in violation of these Terms.</p>
+    <p>
+      Align is a personal productivity tool and does <strong>not</strong> provide
+      financial advice, investment recommendations, tax guidance, or banking services.
+    </p>
   </div>
 
-  <!-- Section 4 -->
+  <!-- ── §4 ── -->
   <div class="section" id="s4">
-    <h2>4. Free &amp; Pro Plans</h2>
-    <p>Align offers two subscription tiers:</p>
+    <h2><span class="section-num">4</span>Free Plan &amp; Limitations</h2>
+    <p>Align is free to download and includes a Free plan with the following limits:</p>
 
-    <table class="data-table">
+    <table class="feat-table">
       <thead>
         <tr>
           <th>Feature</th>
-          <th>Free Plan</th>
-          <th>Pro Plan</th>
+          <th>Free</th>
+          <th>Pro</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Reminders</td><td>1 reminder</td><td>Unlimited</td></tr>
-        <tr><td>Analytics &amp; Insights</td><td>Basic</td><td>Full (spending trends, category breakdown)</td></tr>
-        <tr><td>Calendar View</td><td>✓</td><td>✓</td></tr>
-        <tr><td>CSV Export</td><td>✗</td><td>✓ (up to 2 per month)</td></tr>
-        <tr><td>Notification Inbox</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Offline Access</td><td>✓</td><td>✓</td></tr>
+        <tr>
+          <td>Expense Reminders</td>
+          <td><span class="limited">1 entry (active + archived combined)</span></td>
+          <td><span class="check">Unlimited</span></td>
+        </tr>
+        <tr>
+          <td>Income Entries</td>
+          <td><span class="limited">1 entry (active + archived combined)</span></td>
+          <td><span class="check">Unlimited</span></td>
+        </tr>
+        <tr>
+          <td>Manual Expenses</td>
+          <td><span class="check">Unlimited</span></td>
+          <td><span class="check">Unlimited</span></td>
+        </tr>
+        <tr>
+          <td>Calendar View</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Analytics Charts</td>
+          <td><span class="cross">✗ (empty screen)</span></td>
+          <td><span class="check">✓ Full</span></td>
+        </tr>
+        <tr>
+          <td>Gmail Smart Import</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>CSV Export Reports</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓ (12-month range)</span></td>
+        </tr>
+        <tr>
+          <td>Archive &amp; Restore</td>
+          <td><span class="limited">View only</span></td>
+          <td><span class="check">✓ Reactivate &amp; Delete</span></td>
+        </tr>
+        <tr>
+          <td>Push Notifications</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Payment History</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Priority Support</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Ad-Free Experience</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
       </tbody>
     </table>
 
-    <p>Feature availability is subject to change. We will provide reasonable notice of material changes to plan features via in-app notification or email.</p>
-
-    <h3>Free Plan Limits</h3>
-    <p>Free plan users may add a maximum of one (1) active reminder at any time. Attempting to add additional reminders will prompt an upgrade to the Pro plan.</p>
+    <div class="info-box">
+      <strong>Free limit note:</strong> Archived entries count toward the free-plan
+      limit of 1 Expense Reminder and 1 Income Entry. To create a new entry of that
+      type you must first permanently delete your existing one from the Archive.
+    </div>
   </div>
 
-  <!-- Section 5 -->
+  <!-- ── §5 ── -->
   <div class="section" id="s5">
-    <h2>5. Payments, Billing &amp; Refunds</h2>
+    <h2><span class="section-num">5</span>Align Pro — Subscription Plans &amp; Pricing</h2>
 
-    <h3>Pricing</h3>
-    <p>Pro plan pricing is displayed in Indian Rupees (₹) within the App at the time of purchase. Current pricing:</p>
+    <h3>5.1 Available plans</h3>
+    <p>Align Pro is available in two subscription tiers:</p>
     <ul>
-      <li><strong>Monthly</strong> — ₹19 per month</li>
-      <li><strong>Quarterly</strong> — ₹49 per 3 months (Best Value)</li>
+      <li><strong>Quarterly</strong> — billed every 3 months</li>
+      <li><strong>Yearly</strong> — billed annually (best value, approximately 50% discount)</li>
     </ul>
-    <p>Prices are inclusive of applicable taxes where required by law. We reserve the right to change pricing with at least 30 days' notice to existing subscribers.</p>
+    <p>
+      There is no free trial period in V2. A free trial may be introduced in a future
+      version of the app.
+    </p>
 
-    <h3>Payment Processing</h3>
-    <p>All payments are processed securely through <strong>Razorpay</strong>. By completing a payment, you also agree to Razorpay's <a href="https://razorpay.com/terms/" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>. Align does not store your payment card, UPI, or banking credentials.</p>
+    <h3>5.2 Pricing by currency</h3>
+    <p>
+      Prices are fixed per currency and are not calculated using live exchange rates.
+      The following prices are correct at the time of publishing:
+    </p>
 
-    <h3>Billing Cycle</h3>
-    <p>Pro plans are one-time purchases for the selected period (monthly or quarterly). There is no automatic recurring charge — you must manually renew your plan before expiry to continue using Pro features.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="plan-name">Quarterly</div>
+        <div class="currencies">
+          ₹999 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">₹1,999</span> · INR<br>
+          $10.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">$21.99</span> · USD<br>
+          €9.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">€19.99</span> · EUR<br>
+          £8.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">£17.99</span> · GBP<br>
+          ¥1,650 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">¥3,300</span> · JPY<br>
+          CA$14.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">CA$29.99</span> · CAD<br>
+          A$16.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">A$33.99</span> · AUD
+        </div>
+      </div>
+      <div class="price-card featured">
+        <div class="plan-name">Yearly</div>
+        <div class="plan-label">⭐ Best Value</div>
+        <div class="currencies">
+          ₹2,999 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">₹5,999</span> · INR<br>
+          $32.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">$65.99</span> · USD<br>
+          €29.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">€59.99</span> · EUR<br>
+          £26.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">£53.99</span> · GBP<br>
+          ¥4,950 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">¥9,900</span> · JPY<br>
+          CA$44.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">CA$89.99</span> · CAD<br>
+          A$50.99 <span style="color:var(--text-muted);text-decoration:line-through;font-size:12px">A$101.99</span> · AUD
+        </div>
+      </div>
+    </div>
 
-    <h3>Refund Policy</h3>
-    <p>Except where required by applicable law, purchases are generally non-refundable. However, refunds may be considered in the following cases:</p>
-    <ul>
-      <li>Where required by applicable consumer protection law.</li>
-      <li>In cases of duplicate accidental charges for the same plan period, which will be reviewed and refunded at our discretion.</li>
-    </ul>
-    <p>To request a refund review, contact us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> within 7 days of the transaction date.</p>
+    <div class="warn-box">
+      Prices are subject to change. Any pricing change will be communicated in-app
+      before it takes effect and will not affect your current billing period.
+    </div>
+
+    <h3>5.3 Currency selection</h3>
+    <p>
+      You select your payment currency during onboarding or later in
+      <strong>Settings → Currency</strong>. Once a payment is initiated, the currency
+      used for that transaction is fixed. Future renewals use the currency stored in
+      your profile at the time of renewal.
+    </p>
+    <p>
+      Align supports the following payment currencies: INR, USD, EUR, GBP, JPY, CAD, AUD.
+      Currency display in the app (for your financial entries) is separate from your
+      payment currency and can be set independently.
+    </p>
   </div>
 
-  <!-- Section 6 -->
+  <!-- ── §6 ── -->
   <div class="section" id="s6">
-    <h2>6. Subscription Cancellation &amp; Downgrade</h2>
+    <h2><span class="section-num">6</span>Payment, Billing &amp; Currency</h2>
 
-    <h3>Cancelling Your Pro Plan</h3>
-    <p>You may cancel your Pro plan at any time via <strong>Account → Manage Plan → End Pro Plan</strong> in the App.</p>
-    <p>When you cancel:</p>
+    <h3>6.1 Payment processor</h3>
+    <p>
+      All payments are processed by <strong>Razorpay</strong>, our payment partner.
+      By completing a purchase you agree to Razorpay's
+      <a href="https://razorpay.com/terms/" target="_blank" rel="noopener">
+      Terms of Service</a> and
+      <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">
+      Privacy Policy</a>.
+    </p>
+
+    <h3>6.2 What we store</h3>
+    <p>
+      We store only non-sensitive payment metadata: Razorpay order ID, payment ID,
+      plan type, amount, and currency. We never store card numbers, CVV, UPI PINs,
+      or bank credentials.
+    </p>
+
+    <h3>6.3 Billing cycle</h3>
     <ul>
-      <li>Your Pro access remains active until the end of the current paid period.</li>
-      <li>You will not be charged again unless you choose to renew.</li>
-      <li>After the paid period ends, your account automatically downgrades to the Free plan.</li>
+      <li>
+        <strong>Quarterly:</strong> Charged once every 3 months from your purchase date.
+      </li>
+      <li>
+        <strong>Yearly:</strong> Charged once every 12 months from your purchase date.
+      </li>
     </ul>
+    <p>
+      Your Pro subscription remains active until the end of your paid billing period,
+      even if you cancel renewal (see §7).
+    </p>
 
-    <h3>Plan Expiry &amp; Downgrade</h3>
-    <p>If your Pro plan expires (either through cancellation or non-renewal) your account transitions to the Free plan. The following changes apply immediately upon downgrade:</p>
-    <ul>
-      <li>All Pro-only features (full analytics, unlimited reminders beyond 1, CSV export) are hidden from the App interface.</li>
-      <li>Your existing reminder data remains stored in the backend for <strong>180 days</strong> following the expiry date.</li>
-      <li>If you renew your Pro plan within 180 days of expiry, your previous reminder data becomes accessible again.</li>
-      <li>If you do not renew within 180 days, reminder and notification data is permanently deleted in accordance with Section 8 (Data Retention).</li>
-    </ul>
+    <h3>6.4 Failed payments</h3>
+    <p>
+      If a payment fails, Align displays a payment-failed screen with the option to
+      retry. Your Pro features remain active until expiry. We do not automatically
+      retry failed payments.
+    </p>
 
-    <div class="warning-card">
-      <div>⚠️ <strong>Important:</strong> After 180 days without renewal, reminder data cannot be recovered. We recommend exporting your data via CSV before allowing your Pro plan to expire.</div>
-    </div>
+    <h3>6.5 Taxes</h3>
+    <p>
+      Prices displayed in the app may or may not include applicable taxes (GST, VAT,
+      sales tax) depending on your region. Any applicable taxes are determined and
+      collected by Razorpay in accordance with local laws.
+    </p>
   </div>
 
-  <!-- Section 7 -->
+  <!-- ── §7 ── -->
   <div class="section" id="s7">
-    <h2>7. Account Deactivation &amp; Deletion</h2>
+    <h2><span class="section-num">7</span>Cancellation &amp; Refunds</h2>
 
-    <h3>Requesting Account Deactivation</h3>
-    <p>You may request account deactivation at any time via <strong>Account → Deactivate Account</strong> in the App. Upon request:</p>
-    <ul>
-      <li>Your account is deactivated immediately and you are signed out of the App.</li>
-      <li>Your account enters a <strong>180-day recovery period</strong>.</li>
-      <li>You may reactivate your account by signing in again within this 180-day window — your data will be fully restored.</li>
-    </ul>
+    <h3>7.1 How to cancel</h3>
+    <p>
+      Align Pro subscriptions are managed through the Google Play Store. To cancel,
+      go to <strong>Google Play → Subscriptions → Align → Cancel</strong>. You can
+      also cancel from within the app at <strong>Settings → Plan Details</strong>.
+    </p>
+    <p>
+      Cancellation takes effect at the end of your current billing period. You continue
+      to have access to Pro features until then.
+    </p>
 
-    <h3>Permanent Deletion After Grace Period</h3>
-    <p>If you do not sign in again within 180 days of deactivation:</p>
-    <ul>
-      <li>Your reminder data, notification logs, and push tokens are permanently and irreversibly deleted.</li>
-      <li>Profile and payment records are retained for up to 8 years as required by law (see Section 8).</li>
-    </ul>
+    <h3>7.2 Refund policy</h3>
+    <p>
+      We do not offer refunds for subscription payments unless required by applicable
+      law. If you believe you are entitled to a refund under applicable consumer
+      protection law, please contact us at
+      <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> within
+      <strong>7 days</strong> of the charge.
+    </p>
+    <p>
+      Refund requests for charges processed through Google Play may be submitted
+      directly to Google Play at
+      <a href="https://support.google.com/googleplay/answer/2479637"
+         target="_blank" rel="noopener">support.google.com</a>.
+    </p>
 
-    <h3>Pro Users — Account Deactivation</h3>
-    <p>If you deactivate your account while holding an active Pro plan:</p>
-    <ul>
-      <li>Your active Pro subscription is cancelled immediately.</li>
-      <li>No further renewals will occur.</li>
-      <li>No refund is issued for unused portions of the plan period, except where required by applicable law.</li>
-      <li>Your account and data follow the standard deactivation and data retention rules described above.</li>
-    </ul>
-
-    <div class="info-card">
-      <div>ℹ️ To permanently delete your data immediately (outside the 180-day window), email us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> with the subject line "Immediate Data Deletion Request".</div>
-    </div>
+    <h3>7.3 No partial refunds</h3>
+    <p>
+      We do not provide prorated or partial refunds for unused portions of a billing
+      period when you cancel mid-term.
+    </p>
   </div>
 
-  <!-- Section 8 -->
+  <!-- ── §8 ── -->
   <div class="section" id="s8">
-    <h2>8. Data Retention</h2>
-    <p>We retain your data in accordance with the following schedule:</p>
+    <h2><span class="section-num">8</span>Pro Plan Expiry &amp; Grace Period</h2>
 
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Data Type</th>
-          <th>Retention Period</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Reminder &amp; Notification Data</strong></td>
-          <td><strong>180 days</strong> after account deactivation or Pro plan expiry (if not renewed)</td>
-          <td>Permanently deleted after 180 days. Restored if you sign in or renew Pro within the window.</td>
-        </tr>
-        <tr>
-          <td><strong>Profile Data</strong> (name, email)</td>
-          <td>Up to <strong>8 years</strong> or as required by law</td>
-          <td>Required for fraud prevention, security, and regulatory compliance.</td>
-        </tr>
-        <tr>
-          <td><strong>Payment &amp; Transaction Records</strong></td>
-          <td>Up to <strong>8 years</strong> or as required by law</td>
-          <td>Required for accounting, tax, and legal obligations.</td>
-        </tr>
-        <tr>
-          <td><strong>Push Notification Tokens</strong></td>
-          <td><strong>180 days</strong> after account deactivation</td>
-          <td>Deleted with reminder data.</td>
-        </tr>
-      </tbody>
-    </table>
+    <h3>8.1 Downgrade on expiry</h3>
+    <p>
+      When your Pro subscription expires or is cancelled, your account reverts to the
+      Free plan immediately. Pro features (analytics, Gmail Import, CSV export,
+      archive actions) are hidden at once.
+    </p>
 
-    <p>After the applicable retention period, data is permanently deleted or irreversibly anonymised. Retained records are stored securely and used only for the purposes described in our <a href="./privacy-policy.html">Privacy Policy</a>.</p>
+    <h3>8.2 Seven-day grace period for reminders</h3>
+    <p>
+      Your active Expense Reminders remain active for <strong>7 days</strong> after
+      expiry. After this grace period, a nightly automated process archives all
+      reminders except the one created first, reducing your account to the Free-plan
+      limit of 1 active reminder.
+    </p>
+
+    <h3>8.3 Data visibility after expiry</h3>
+    <ul>
+      <li>
+        Your historical data (payment logs, analytics, archived entries) remains
+        visible in the app for <strong>180 days</strong> after expiry.
+      </li>
+      <li>
+        After 180 days the data is hidden from the app but retained in our database
+        for up to <strong>365 days</strong> to allow reactivation.
+      </li>
+      <li>
+        After 365 days from expiry, all data is permanently and automatically deleted
+        from our systems.
+      </li>
+    </ul>
+
+    <h3>8.4 Reactivation</h3>
+    <p>
+      You may re-subscribe at any time. If you resubscribe within 365 days of expiry,
+      your historical data will be restored. After 365 days, data cannot be recovered.
+    </p>
   </div>
 
-  <!-- Section 9 -->
+  <!-- ── §9 ── -->
   <div class="section" id="s9">
-    <h2>9. Acceptable Use</h2>
-    <p>You agree to use Align only for lawful purposes and in accordance with these Terms. You must not:</p>
+    <h2><span class="section-num">9</span>Account Deactivation &amp; Deletion</h2>
+
+    <h3>9.1 Self-deactivation</h3>
+    <p>
+      You can deactivate your account at any time from
+      <strong>Settings → Data &amp; Privacy → Deactivate Account</strong>.
+      Upon deactivation:
+    </p>
     <ul>
-      <li>Use the App to track payments for illegal activities or services.</li>
-      <li>Attempt to gain unauthorised access to Align's systems, servers, or databases.</li>
-      <li>Reverse-engineer, decompile, disassemble, or attempt to extract the source code of the App.</li>
-      <li>Use automated scripts, bots, or tools to scrape, crawl, or access the App in a manner that places unreasonable load on our infrastructure.</li>
-      <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity.</li>
-      <li>Use the App to transmit any unsolicited commercial communication, malware, or harmful code.</li>
-      <li>Violate any applicable local, state, national, or international law or regulation.</li>
+      <li>You are logged out immediately</li>
+      <li>Your Pro plan expires immediately (no refund for remaining period)</li>
+      <li>Your account enters a deactivated state</li>
+      <li>Data remains stored per the timeline in §8.3</li>
     </ul>
-    <p>Align reserves the right to suspend or terminate your account immediately without notice if you violate these provisions.</p>
+
+    <h3>9.2 Permanent account deletion</h3>
+    <p>
+      You can request complete deletion of your account and all associated data from:
+    </p>
+    <ul>
+      <li>
+        <strong>In-app:</strong> Settings → Data &amp; Privacy → Delete Account
+      </li>
+      <li>
+        <strong>Web:</strong>
+        <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html"
+           target="_blank" rel="noopener">
+        dev-dhavalp.github.io/align-docs/account-deletion.html</a>
+      </li>
+      <li>
+        <strong>Email:</strong>
+        <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>
+      </li>
+    </ul>
+    <p>
+      Upon receiving a deletion request we will permanently erase all personal data
+      within <strong>30 days</strong>. Payment transaction metadata may be retained
+      for up to 7 years as required by financial recordkeeping laws.
+    </p>
+
+    <h3>9.3 Soft-deleted entries</h3>
+    <p>
+      When you permanently delete an individual reminder or income entry from the Archive,
+      the record is soft-deleted and hidden from the app immediately. The underlying data
+      is retained for <strong>30 days</strong> for internal recovery, then purged.
+    </p>
+
+    <h3>9.4 Termination by Align</h3>
+    <p>
+      We reserve the right to suspend or terminate your account without notice if we
+      determine, in our sole discretion, that you have violated these Terms, engaged
+      in fraudulent activity, or abused the Service.
+    </p>
   </div>
 
-  <!-- Section 10 -->
+  <!-- ── §10 ── -->
   <div class="section" id="s10">
-    <h2>10. Intellectual Property</h2>
-    <p>All content, features, functionality, branding, and technology within the Align App — including but not limited to text, graphics, logos, icons, source code, algorithms, and user interface designs — are owned by or licensed to Align and are protected by applicable intellectual property laws.</p>
-    <p>We grant you a limited, non-exclusive, non-transferable, revocable licence to use the App for your personal, non-commercial purposes in accordance with these Terms.</p>
-    <p>You may not copy, modify, distribute, sell, sublicense, or create derivative works from any part of the App without our prior written consent.</p>
-    <p><strong>Your data remains yours.</strong> You retain full ownership of the reminder data, notes, and other personal content you create in the App. By using the App, you grant Align a limited licence to store and process this data solely to provide the service to you.</p>
+    <h2><span class="section-num">10</span>Data Ownership &amp; Privacy</h2>
+
+    <h3>10.1 Your data is yours</h3>
+    <p>
+      All financial data you enter into Align — expense reminders, income entries,
+      payment history, notes — belongs to you. We do not claim ownership of your data.
+    </p>
+
+    <h3>10.2 How we use your data</h3>
+    <p>
+      We use your data solely to provide and improve the Service. We do not sell,
+      rent, or share your personal financial data with third parties for advertising
+      or marketing purposes. See our
+      <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html">
+      Privacy Policy</a> for complete details.
+    </p>
+
+    <h3>10.3 Data portability</h3>
+    <p>
+      Pro subscribers can export their financial data at any time as a CSV file
+      covering up to 12 months via <strong>Settings → Export Report</strong>.
+    </p>
+
+    <h3>10.4 Security</h3>
+    <p>
+      We implement industry-standard security measures including TLS encryption in
+      transit, encryption at rest, Row-Level Security (RLS) in our database, and
+      HMAC-SHA256 webhook signature verification. See our
+      <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html">
+      Privacy Policy §10</a> for the full security summary.
+    </p>
+
+    <h3>10.5 Offline operation</h3>
+    <p>
+      Align caches your data locally using MMKV encrypted storage so you can view
+      and interact with your data when offline. Changes made offline are queued and
+      synced when connectivity is restored.
+    </p>
   </div>
 
-  <!-- Section 11 -->
+  <!-- ── §11 ── -->
   <div class="section" id="s11">
-    <h2>11. Disclaimer of Warranties</h2>
-    <p>Align is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without warranties of any kind, either express or implied, including but not limited to:</p>
-    <ul>
-      <li>Warranties of merchantability, fitness for a particular purpose, or non-infringement.</li>
-      <li>Guarantees that the App will be error-free, uninterrupted, or free from harmful components.</li>
-      <li>Guarantees regarding the accuracy, completeness, or reliability of any reminder, notification, or financial calculation displayed in the App.</li>
-    </ul>
-    <div class="warning-card">
-      <div>⚠️ <strong>Important:</strong> Align is a reminder and tracking tool only. It does not constitute financial advice. You remain solely responsible for ensuring your bills and payments are made on time. We are not liable for any missed payments, late fees, or financial consequences arising from your use of or reliance on the App.</div>
+    <h2><span class="section-num">11</span>Gmail Smart Import (Optional, Pro Only)</h2>
+
+    <div class="info-box">
+      Gmail Smart Import is an <strong>optional</strong> Pro feature. It is never
+      activated without your explicit in-app consent.
     </div>
+
+    <h3>11.1 What it does</h3>
+    <p>
+      Gmail Smart Import scans your Gmail inbox for billing confirmation emails and
+      payment receipts to suggest expense reminders, income entries, or manual expenses
+      for one-tap import.
+    </p>
+
+    <h3>11.2 Scope of access</h3>
+    <p>
+      We request read-only Gmail access (<code>gmail.readonly</code> scope) only.
+      We cannot send, delete, modify, or forward any emails. Raw email content is
+      processed in memory and is never stored on our servers.
+    </p>
+
+    <h3>11.3 Your control</h3>
+    <ul>
+      <li>You may deny Gmail access — the rest of the app continues to work normally.</li>
+      <li>
+        You may revoke Gmail access at any time from
+        <strong>Settings → Smart Import → Disconnect</strong> or from
+        <a href="https://myaccount.google.com/permissions" target="_blank"
+           rel="noopener">myaccount.google.com/permissions</a>.
+      </li>
+      <li>Each imported item requires your explicit approval before being saved.</li>
+    </ul>
+
+    <h3>11.4 Google API compliance</h3>
+    <p>
+      Align's use of Gmail data complies with Google's
+      <a href="https://developers.google.com/terms/api-services-user-data-policy"
+         target="_blank" rel="noopener">API Services User Data Policy</a>,
+      including the Limited Use requirements. Gmail data is used only to provide
+      the import feature and is not used for advertising or shared with third parties.
+    </p>
   </div>
 
-  <!-- Section 12 -->
+  <!-- ── §12 ── -->
   <div class="section" id="s12">
-    <h2>12. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by applicable law, Align and its officers, directors, employees, agents, and licensors shall not be liable for:</p>
-    <ul>
-      <li>Any indirect, incidental, special, consequential, or punitive damages.</li>
-      <li>Any loss of profits, data, goodwill, or business opportunities.</li>
-      <li>Damages arising from missed payments, overdue bills, or financial losses resulting from reliance on App notifications or data.</li>
-      <li>Damages resulting from unauthorised access to or alteration of your data.</li>
-      <li>Any matter beyond our reasonable control, including network outages, device failures, or third-party service interruptions.</li>
-    </ul>
-    <p>In jurisdictions that do not allow the exclusion of certain warranties or limitation of liability, our liability is limited to the maximum extent permitted by law. In all cases, our total aggregate liability to you shall not exceed the amount you paid to Align in the twelve (12) months preceding the event giving rise to the claim, or ₹500, whichever is greater.</p>
-  </div>
-
-  <!-- Section 13 -->
-  <div class="section" id="s13">
-    <h2>13. Indemnification</h2>
-    <p>You agree to defend, indemnify, and hold harmless Align and its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from:</p>
-    <ul>
-      <li>Your use of or access to the App.</li>
-      <li>Your violation of these Terms.</li>
-      <li>Your violation of any applicable law or the rights of any third party.</li>
-      <li>Any content or data you submit to the App.</li>
-    </ul>
-  </div>
-
-  <!-- Section 14 -->
-  <div class="section" id="s14">
-    <h2>14. Third-Party Services</h2>
-    <p>Align integrates with the following third-party services. Your use of these services within or in connection with the App is governed by their respective terms and privacy policies:</p>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Service</th>
-          <th>Role</th>
-          <th>Terms / Privacy</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Google</strong></td>
-          <td>Sign-In authentication</td>
-          <td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google ToS</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Supabase</strong></td>
-          <td>Database &amp; backend infrastructure</td>
-          <td><a href="https://supabase.com/terms" target="_blank" rel="noopener">Supabase ToS</a> · <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Razorpay</strong></td>
-          <td>Payment processing</td>
-          <td><a href="https://razorpay.com/terms/" target="_blank" rel="noopener">Razorpay ToS</a> · <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Expo</strong></td>
-          <td>Push notification delivery</td>
-          <td><a href="https://expo.dev/terms" target="_blank" rel="noopener">Expo ToS</a> · <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Privacy</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Align is not responsible for the practices, content, or availability of third-party services. Links to third-party websites or services from within the App do not constitute endorsement.</p>
-  </div>
-
-  <!-- Section 15 -->
-  <div class="section" id="s15">
-    <h2>15. Governing Law &amp; Disputes</h2>
-    <p>These Terms are governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.</p>
-
-    <h3>Informal Resolution</h3>
-    <p>Before initiating any formal legal proceedings, you agree to first attempt to resolve any dispute informally by contacting us at <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>. We will attempt to resolve the dispute within 30 days.</p>
-
-    <h3>Arbitration</h3>
-    <p>If informal resolution fails, any dispute arising out of or relating to these Terms or the App shall be resolved by binding arbitration under the Arbitration and Conciliation Act, 1996 (India). The arbitration shall be conducted in English, and the seat of arbitration shall be Ahmedabad, Gujarat, India.</p>
-
-    <h3>Jurisdiction</h3>
-    <p>For matters not subject to arbitration, you consent to the exclusive jurisdiction of the courts located in Ahmedabad, Gujarat, India.</p>
-
-    <h3>Consumer Rights</h3>
-    <p>Nothing in these Terms is intended to limit any rights you may have under applicable consumer protection laws in your jurisdiction that cannot be excluded or waived by contract.</p>
-  </div>
-
-  <!-- Section 16 -->
-  <div class="section" id="s16">
-    <h2>16. Changes to These Terms</h2>
-    <p>We may revise these Terms from time to time to reflect changes in the law, our services, or our practices. When we make material changes, we will:</p>
-    <ul>
-      <li>Update the "Last updated" date at the top of this page.</li>
-      <li>Notify you via an in-app notification at least 14 days before the changes take effect.</li>
-      <li>For significant changes that materially affect your rights, request your renewed consent where required by applicable law.</li>
-    </ul>
-    <p>Your continued use of the App after the effective date of the revised Terms constitutes your acceptance of the changes. If you do not agree to the revised Terms, please stop using the App and request account deactivation.</p>
-  </div>
-
-  <!-- Section 17 -->
-  <div class="section" id="s17">
-    <h2>17. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding these Terms &amp; Conditions, please contact us:</p>
-
-    <div class="contact-card">
-      <h3>Get in touch</h3>
-      <p>We aim to respond to all enquiries within 30 days.</p>
-      <p><a href="mailto:alignapps4@gmail.com">✉️ alignapps4@gmail.com</a></p>
-      <p style="margin-top: 12px; font-size: 13px; color: #57606a;">
-        For account deletion requests, email us with subject: <strong>"Account Deletion Request"</strong><br/>
-        For data enquiries, email us with subject: <strong>"Data Request"</strong><br/>
-        For immediate data deletion, email us with subject: <strong>"Immediate Data Deletion Request"</strong>
-      </p>
+    <h2><span class="section-num">12</span>Push Notifications</h2>
+    <p>
+      Align delivers bill reminders and income alerts as push notifications. You
+      grant notification permission during onboarding. You may disable notifications
+      at any time in <strong>Settings → Notifications</strong> or in your device's
+      system settings.
+    </p>
+    <p>
+      Notifications are scheduled based on your configured reminder-before preferences,
+      reminder time, and account timezone. Changing your timezone in settings updates
+      all future notification schedules.
+    </p>
+    <p>
+      If push notification permission is denied, reminders are delivered only to the
+      in-app Notification Inbox.
+    </p>
+    <div class="warn-box">
+      Align does not use push notifications for marketing or promotional messages.
+      All notifications relate exclusively to financial entries and reminders you
+      have created.
     </div>
   </div>
+
+  <!-- ── §13 ── -->
+  <div class="section" id="s13">
+    <h2><span class="section-num">13</span>Intellectual Property</h2>
+
+    <h3>13.1 Our property</h3>
+    <p>
+      The Align application, its design, source code, trademarks, logos, and all
+      content provided by us (excluding your personal data) are the intellectual
+      property of Align and its developers. All rights are reserved.
+    </p>
+
+    <h3>13.2 Licence to use</h3>
+    <p>
+      We grant you a limited, non-exclusive, non-transferable, revocable licence to
+      use the App on your personal Android device strictly in accordance with these
+      Terms and for personal, non-commercial purposes.
+    </p>
+
+    <h3>13.3 Restrictions</h3>
+    <p>You may not:</p>
+    <ul>
+      <li>Copy, modify, or distribute the App or any part of it</li>
+      <li>Reverse engineer or decompile the App</li>
+      <li>Remove or alter any copyright, trademark, or proprietary notices</li>
+      <li>Use the App to build a competing product or service</li>
+      <li>Resell, sublicense, or commercially exploit the App or its content</li>
+    </ul>
+
+    <h3>13.4 Open-source components</h3>
+    <p>
+      Align uses open-source libraries (including Expo, React Native, Zustand,
+      Supabase client, and others). Each library is subject to its own licence terms.
+    </p>
+  </div>
+
+  <!-- ── §14 ── -->
+  <div class="section" id="s14">
+    <h2><span class="section-num">14</span>Prohibited Uses</h2>
+    <p>You agree not to use Align to:</p>
+    <ul>
+      <li>Violate any applicable law, regulation, or third-party rights</li>
+      <li>
+        Upload or transmit any malware, viruses, or malicious code through the App
+      </li>
+      <li>
+        Attempt to gain unauthorised access to other users' data or our server
+        infrastructure
+      </li>
+      <li>
+        Circumvent, disable, or interfere with security-related features of the App
+      </li>
+      <li>
+        Use automated tools, bots, or scripts to interact with the App in a manner
+        that places unreasonable load on our infrastructure
+      </li>
+      <li>
+        Create multiple accounts to circumvent free-plan limits or obtain features
+        without payment
+      </li>
+      <li>
+        Use the App for money laundering, fraud, or any other illegal financial activity
+      </li>
+    </ul>
+    <p>
+      Violation of this section may result in immediate account suspension without
+      refund and may be reported to appropriate authorities.
+    </p>
+  </div>
+
+  <!-- ── §15 ── -->
+  <div class="section" id="s15">
+    <h2><span class="section-num">15</span>Disclaimers &amp; Limitation of Liability</h2>
+
+    <h3>15.1 No financial advice</h3>
+    <p>
+      Align is a personal productivity tool. Nothing in the App constitutes financial
+      advice, investment guidance, tax advice, or legal advice. You are solely
+      responsible for your financial decisions.
+    </p>
+
+    <h3>15.2 Service availability</h3>
+    <p>
+      We strive to keep Align available at all times but cannot guarantee uninterrupted
+      access. We may suspend or terminate the Service for maintenance, upgrades, or
+      reasons outside our control. We are not liable for any losses arising from
+      service unavailability.
+    </p>
+
+    <h3>15.3 Data accuracy</h3>
+    <p>
+      Analytics, reports, and calculations in Align are based on the data you enter.
+      We are not responsible for errors in your financial records resulting from
+      incorrect data entry, synchronisation failures caused by device or network
+      issues, or third-party service outages (Supabase, Razorpay, Google).
+    </p>
+
+    <h3>15.4 Disclaimer of warranties</h3>
+    <p>
+      THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY
+      KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+    </p>
+
+    <h3>15.5 Limitation of liability</h3>
+    <p>
+      TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ALIGN,
+      ITS DEVELOPERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+      CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR
+      GOODWILL ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR YOUR USE OF THE
+      SERVICE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+    </p>
+    <p>
+      OUR TOTAL AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED THE AMOUNT YOU PAID TO
+      US IN THE 12 MONTHS PRECEDING THE CLAIM.
+    </p>
+
+    <div class="error-box">
+      Some jurisdictions do not allow the exclusion or limitation of liability for
+      consequential or incidental damages. In such jurisdictions, our liability is
+      limited to the maximum extent permitted by applicable law.
+    </div>
+  </div>
+
+  <!-- ── §16 ── -->
+  <div class="section" id="s16">
+    <h2><span class="section-num">16</span>Indemnification</h2>
+    <p>
+      You agree to indemnify, defend, and hold harmless Align and its developers,
+      officers, and agents from and against any claims, liabilities, damages, losses,
+      costs, and expenses (including reasonable legal fees) arising out of or relating
+      to: (a) your use of the App; (b) your violation of these Terms; (c) your
+      violation of any third-party rights; or (d) any data you enter into the App.
+    </p>
+  </div>
+
+  <!-- ── §17 ── -->
+  <div class="section" id="s17">
+    <h2><span class="section-num">17</span>Governing Law</h2>
+    <p>
+      These Terms are governed by and construed in accordance with the laws of
+      <strong>India</strong>, without regard to conflict of law principles.
+    </p>
+    <p>
+      Any disputes arising from or related to these Terms or your use of Align shall
+      be subject to the exclusive jurisdiction of the courts located in
+      <strong>Gujarat, India</strong>.
+    </p>
+    <p>
+      If you are accessing Align from outside India, you are responsible for
+      compliance with local laws to the extent they are applicable.
+    </p>
+  </div>
+
+  <!-- ── §18 ── -->
+  <div class="section" id="s18">
+    <h2><span class="section-num">18</span>Changes to These Terms</h2>
+    <p>
+      We reserve the right to update these Terms at any time. When we make material
+      changes, we will:
+    </p>
+    <ul>
+      <li>Update the "Effective date" at the top of this page</li>
+      <li>Display an in-app notice or banner informing you of the update</li>
+    </ul>
+    <p>
+      If you continue to use Align after updated Terms are posted, you accept the
+      revised Terms. If you do not agree to the updated Terms, you must stop using
+      the App and may request account deletion as described in §9.
+    </p>
+  </div>
+
+  <!-- ── §19 Contact ── -->
+  <div class="contact-card" id="s19">
+    <h2>Questions About These Terms?</h2>
+    <p>
+      If you have any questions, concerns, or requests relating to these Terms
+      or your use of Align, please contact us. We aim to respond within 5 business days.
+    </p>
+    <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>
+      &copy; 2026 Align &nbsp;·&nbsp;
+      <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="https://dev-dhavalp.github.io/align-docs/terms.html">Terms of Service</a>
+      &nbsp;·&nbsp;
+      <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html">Delete Account</a>
+    </p>
+    <p style="margin-top:8px;">
+      Version 2 (App v2.0.0+) &nbsp;·&nbsp; Last updated 25 June 2026
+      &nbsp;·&nbsp; App Package: <code>com.dhaval.align</code>
+    </p>
+  </footer>
+
 
 </div>
-
-<footer>
-  <p>© 2026 Align. All rights reserved. &nbsp;·&nbsp;
-    <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="./terms.html">Terms &amp; Conditions</a>
-  </p>
-</footer>
 
 </body>
 </html>
