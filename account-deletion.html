@@ -141,7 +141,7 @@
       color: #0969da;
     }
 
-    /* ── Tables ──────────────────────────────────────────── */
+    /* ── Tables ─────────────────────────────────────────── */
     .data-table {
       width: 100%;
       border-collapse: collapse;
@@ -280,20 +280,20 @@
 
 <div class="container">
   <h1>Account Deletion</h1>
-  <p class="last-updated">Last updated: June 4, 2026 &nbsp;·&nbsp; Effective: June 4, 2026</p>
+  <p class="last-updated">Last updated: November 25, 2026 &nbsp;·&nbsp; Effective: November 25, 2026</p>
 
   <div class="info-card">
-    <div>This page explains how Align users can request account deactivation, account deletion, and data removal. Please read it carefully.</div>
+    <div>This page explains how Align users can deactivate their account, reactivate it within the recovery window, or request permanent account and data deletion.</div>
   </div>
 
   <nav class="toc">
     <h2>Contents</h2>
     <ol>
-      <li><a href="#s1">How to Request Account Deletion</a></li>
+      <li><a href="#s1">How to Deactivate Your Account In-App</a></li>
       <li><a href="#s2">What Happens After Deactivation?</a></li>
-      <li><a href="#s3">Data Deleted After 180 Days</a></li>
+      <li><a href="#s3">Backend Purge Schedule &amp; Affected Data</a></li>
       <li><a href="#s4">Data That May Be Retained</a></li>
-      <li><a href="#s5">Immediate Data Deletion Request</a></li>
+      <li><a href="#s5">Direct Permanent Deletion Request</a></li>
       <li><a href="#s6">Related Documents</a></li>
       <li><a href="#s7">Contact Us</a></li>
     </ol>
@@ -301,61 +301,64 @@
 
   <!-- Section 1 -->
   <div class="section" id="s1">
-    <h2>1. How to Request Account Deletion</h2>
-    <p>You can initiate account deletion directly within the Align mobile application ("App"):</p>
+    <h2>1. How to Deactivate Your Account In-App</h2>
+    <p>You can deactivate your account directly within the Align mobile application ("App"):</p>
     <ul>
       <li>Open the Align app</li>
-      <li>Go to <strong>Account</strong></li>
+      <li>Go to <strong>Settings</strong> (or the <strong>Sidebar</strong>) → <strong>Data &amp; Privacy</strong></li>
       <li>Select <strong>Deactivate Account</strong></li>
-      <li>Confirm your request</li>
+      <li>Select a reason and confirm your request</li>
     </ul>
 
     <div class="info-card">
-      <div>ℹ️ Account deletion begins with an immediate account deactivation and a 180-day recovery period.</div>
+      <div>ℹ️ In-app deactivation places your account in a 180-day reactivation window. To request immediate permanent deletion without waiting for automated cleanup, see <a href="#s5">Section 5</a>.</div>
     </div>
   </div>
 
   <!-- Section 2 -->
   <div class="section" id="s2">
     <h2>2. What Happens After Deactivation?</h2>
-    <p>Upon requesting account deactivation, the following changes occur:</p>
+    <p>Upon confirming account deactivation, the following occurs immediately:</p>
     <ul>
-      <li>Your account is immediately deactivated and you are signed out of the App.</li>
-      <li>Your account enters a 180-day recovery period.</li>
+      <li>Your account is marked as <code>deactivated</code> in our database and you are signed out of the App.</li>
+      <li>If you have an active Pro pass, your active Pro record is removed upon deactivation.</li>
+      <li>Your account enters a <strong>180-day</strong> reactivation window (<code>data_available_until</code>).</li>
       <li>You may reactivate your account by signing in again within the 180-day window.</li>
-      <li>If reactivated during this period, eligible data will be fully restored.</li>
     </ul>
   </div>
 
   <!-- Section 3 -->
   <div class="section" id="s3">
-    <h2>3. Data Deleted After 180 Days</h2>
-    <p>If you do not reactivate your account within 180 days of deactivation, the following data will be permanently and irreversibly deleted from our database servers:</p>
+    <h2>3. Backend Purge Schedule &amp; Affected Data</h2>
+    <p>If you do not reactivate your account, Align's automated nightly backend cleanup purges reminders and notification logs <strong>365 days</strong> after deactivation. Direct deletion requests submitted via email (§5) are processed within <strong>30 days</strong>.</p>
+    <p>A full account deletion covers:</p>
     <ul>
-      <li>Reminder data (bill names, amounts, due dates, payment frequencies, categories, notes)</li>
-      <li>Notification logs and history</li>
-      <li>Push notification tokens</li>
+      <li>Expense reminders, manual expenses, and payment history</li>
+      <li>Income entries and payment history</li>
+      <li>Receipt metadata records in Supabase</li>
+      <li>Notification logs and push notification tokens</li>
     </ul>
+    <p><strong>Local device data:</strong> Files and caches stored solely on your phone — including saved receipt files (<code>receipt_*.jpg/png/pdf</code>), local MMKV app cache, Pending SMS Reviews, the AES-256-GCM encrypted native SMS queue, and the 14-day SHA-256 SMS deduplication cache — remain on your device until you clear app storage or uninstall the Align app.</p>
   </div>
 
   <!-- Section 4 -->
   <div class="section" id="s4">
     <h2>4. Data That May Be Retained</h2>
-    <p>Certain information may be retained for up to 8 years, or longer if required by applicable tax, accounting, fraud prevention, legal, regulatory, or security obligations:</p>
+    <p>Certain information may be retained for up to <strong>7 years</strong>, or longer if required by applicable tax, accounting, fraud prevention, legal, regulatory, or security obligations:</p>
     <ul>
       <li>Name and email address</li>
       <li>Subscription history and transaction references</li>
       <li>Payment and billing records processed through Razorpay</li>
     </ul>
-    <p>Retained records are stored securely and used only for the purposes described in our <a href="./privacy-policy.html">Privacy Policy</a> and <a href="./terms.html">Terms &amp; Conditions</a>.</p>
+    <p>Retained records are stored securely and used only for the purposes described in our <a href="./privacy-policy.html">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a>.</p>
   </div>
 
   <!-- Section 5 -->
   <div class="section" id="s5">
-    <h2>5. Immediate Data Deletion Request</h2>
-    <p>If you wish to request immediate, permanent deletion of your data without waiting for the 180-day recovery period, please contact us by email.</p>
+    <h2>5. Direct Permanent Deletion Request</h2>
+    <p>If you wish to request permanent deletion of your account and personal data without waiting for the automated backend cleanup schedule, please contact us by email. Direct deletion requests are processed within <strong>30 days</strong>.</p>
     <div class="contact-card">
-      <h3>Immediate Deletion Request</h3>
+      <h3>Permanent Deletion Request</h3>
       <p>Email: <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a></p>
       <p>Subject Line: <strong>Immediate Data Deletion Request</strong></p>
     </div>
@@ -367,7 +370,8 @@
     <p>For more detailed information regarding your data usage and legal terms, please review:</p>
     <ul>
       <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="./terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./data-deletion.html">Data Deletion Guide</a></li>
     </ul>
   </div>
 
@@ -387,7 +391,7 @@
 <footer>
   <p>© 2026 Align. All rights reserved. &nbsp;·&nbsp;
     <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="./terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
+    <a href="./terms.html">Terms of Service</a> &nbsp;·&nbsp;
     <a href="./account-deletion.html">Account Deletion</a> &nbsp;·&nbsp;
     <a href="./data-deletion.html">Data Deletion</a>
   </p>
