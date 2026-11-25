@@ -110,7 +110,7 @@
 
 <div class="container">
   <h1>Terms of Service</h1>
-  <p class="last-updated">Version 2 &nbsp;&middot;&nbsp; Effective 25 June 2026 &nbsp;&middot;&nbsp; Distributed via Google Play Store</p>
+  <p class="last-updated">Version 3 &nbsp;&middot;&nbsp; Effective 25 November 2026 &nbsp;&middot;&nbsp; Distributed via Google Play Store</p>
 
   <div class="intro-banner">
     <p>
@@ -121,12 +121,12 @@
     </p>
     <div class="info-box">
       <strong>Short version:</strong> Align is a personal finance tool. Your data belongs
-      to you. Free plan has entry limits. Pro plan unlocks all features. Subscriptions
-      are billed through Razorpay.
+      to you. Free plan has entry and receipt limits. Pro plan unlocks all features via
+      one-time, fixed-duration Razorpay passes.
     </div>
     <p>
-      These Terms were last updated on <strong>25 June 2026</strong> and apply to
-      Align Version 2 (App Version 2.0.0+) distributed via the Google Play Store.
+      These Terms were last updated on <strong>25 November 2026</strong> and apply to
+      Align Version 2.1.14+ distributed via the Google Play Store.
     </p>
   </div>
 
@@ -144,7 +144,7 @@
       <li><a href="#s8">Pro Plan Expiry &amp; Grace Period</a></li>
       <li><a href="#s9">Account Deactivation &amp; Deletion</a></li>
       <li><a href="#s10">Data Ownership &amp; Privacy</a></li>
-      <li><a href="#s11">Gmail Smart Import (Optional, Pro Only)</a></li>
+      <li><a href="#s11">Optional Features (SMS Tracking, Receipt OCR &amp; Spending Protection)</a></li>
       <li><a href="#s12">Push Notifications</a></li>
       <li><a href="#s13">Intellectual Property</a></li>
       <li><a href="#s14">Prohibited Uses</a></li>
@@ -213,11 +213,13 @@
       <li>Create and manage <strong>Expense Reminders</strong> for recurring and one-time bills</li>
       <li>Track <strong>Income entries</strong> from salary, freelance, rental, business, and other sources</li>
       <li>Log <strong>manual discretionary expenses</strong></li>
+      <li>Optionally detect financial transactions from incoming SMS alerts on Android via <strong>SMS Transaction Tracking</strong></li>
+      <li>Optionally scan and extract details from receipts using on-device <strong>Receipt OCR</strong></li>
+      <li>Optionally receive local budget alerts when opening supported payment apps on Android via <strong>Spending Protection</strong></li>
       <li>View a <strong>monthly calendar</strong> of all financial activity</li>
       <li>Analyse spending and income with <strong>interactive analytics charts</strong> (Pro)</li>
-      <li>Import billing emails from Gmail using <strong>Smart Import</strong> (Pro)</li>
       <li>Export financial data as <strong>CSV reports</strong> (Pro)</li>
-      <li>Receive <strong>push notification reminders</strong> before due dates</li>
+      <li>Receive <strong>push notification reminders</strong> before due dates (Pro)</li>
     </ul>
     <p>
       Align is a personal productivity tool and does <strong>not</strong> provide
@@ -280,20 +282,25 @@
           <td><span class="check">✓</span></td>
         </tr>
         <tr>
+          <td>Receipt Scanning &amp; Storage</td>
+          <td><span class="limited">2 receipts/month (max 2 MB each)</span></td>
+          <td><span class="check">✓ 30 receipts/month (max 2 MB each)</span></td>
+        </tr>
+        <tr>
           <td>Priority Support</td>
           <td><span class="cross">✗</span></td>
           <td><span class="check">✓</span></td>
         </tr>
         <tr>
           <td>Ad-Free Experience</td>
-          <td><span class="cross">✗</span></td>
+          <td><span class="check">✓</span></td>
           <td><span class="check">✓</span></td>
         </tr>
       </tbody>
     </table>
 
     <div class="info-box">
-      <strong>Free limit note:</strong> The Free plan allows a total of 10 entries max (5 Expense entries and 5 Income entries). Reminder notifications are exclusive to Align Pro users.
+      <strong>Free limit note:</strong> The Free plan allows up to 5 Expense entries and 5 Income entries (10 total) and up to 2 receipt imports per month. Reminder notifications, analytics charts, and CSV export reports require Align Pro. If you downgrade from Pro, your account keeps 1 active scheduled reminder after a 7-day grace period.
     </div>
   </div>
 
@@ -386,25 +393,26 @@
       or bank credentials.
     </p>
 
-    <h3>6.3 Billing cycle</h3>
+    <h3>6.3 Plan duration &amp; stacking</h3>
     <ul>
       <li>
-        <strong>Quarterly:</strong> Charged once every 3 months from your purchase date.
+        <strong>Quarterly:</strong> One-time purchase granting 90 days of Align Pro access.
       </li>
       <li>
-        <strong>Yearly:</strong> Charged once every 12 months from your purchase date.
+        <strong>Yearly:</strong> One-time purchase granting 365 days of Align Pro access.
       </li>
     </ul>
     <p>
-      Your Pro subscription remains active until the end of your paid billing period,
-      even if you cancel renewal (see §7).
+      Align Pro passes are fixed-duration purchases processed via Razorpay and do not
+      automatically renew. If you purchase an additional pass while your Pro access
+      is still active, the new duration stacks onto your existing expiry date.
     </p>
 
     <h3>6.4 Failed payments</h3>
     <p>
       If a payment fails, Align displays a payment-failed screen with the option to
-      retry. Your Pro features remain active until expiry. We do not automatically
-      retry failed payments.
+      retry, and checks pending Razorpay orders on next app launch. We do not
+      automatically charge or retry failed payments.
     </p>
 
     <h3>6.5 Taxes</h3>
@@ -419,36 +427,30 @@
   <div class="section" id="s7">
     <h2><span class="section-num">7</span>Cancellation &amp; Refunds</h2>
 
-    <h3>7.1 How to cancel</h3>
+    <h3>7.1 Plan expiry (no recurring auto-renewal)</h3>
     <p>
-      Align Pro subscriptions are managed through the Google Play Store. To cancel,
-      go to <strong>Google Play → Subscriptions → Align → Cancel</strong>. You can
-      also cancel from within the app at <strong>Settings → Plan Details</strong>.
-    </p>
-    <p>
-      Cancellation takes effect at the end of your current billing period. You continue
-      to have access to Pro features until then.
+      Align Pro passes are one-time, fixed-duration purchases processed via
+      <strong>Razorpay</strong> (90 days for Quarterly, 365 days for Yearly). Because
+      they do not auto-renew, there is no recurring subscription to cancel — your Pro
+      access simply expires at the end of your purchased period. You can view your
+      expiry date and payment history in <strong>Settings → Plan Details</strong>.
     </p>
 
     <h3>7.2 Refund policy</h3>
     <p>
-      We do not offer refunds for subscription payments unless required by applicable
-      law. If you believe you are entitled to a refund under applicable consumer
-      protection law, please contact us at
+      Purchases are generally non-refundable once Pro access is activated, except where
+      required by applicable consumer protection law. If you believe you are eligible
+      for a refund under applicable law or experienced a duplicate/erroneous charge,
+      please contact us at
       <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a> within
-      <strong>7 days</strong> of the charge.
-    </p>
-    <p>
-      Refund requests for charges processed through Google Play may be submitted
-      directly to Google Play at
-      <a href="https://support.google.com/googleplay/answer/2479637"
-         target="_blank" rel="noopener">support.google.com</a>.
+      <strong>7 days</strong> of the transaction with your Razorpay payment ID or
+      order ID.
     </p>
 
     <h3>7.3 No partial refunds</h3>
     <p>
-      We do not provide prorated or partial refunds for unused portions of a billing
-      period when you cancel mid-term.
+      We do not provide prorated or partial refunds for unused portions of an active
+      Quarterly or Yearly Pro pass.
     </p>
   </div>
 
@@ -458,9 +460,9 @@
 
     <h3>8.1 Downgrade on expiry</h3>
     <p>
-      When your Pro subscription expires or is cancelled, your account reverts to the
-      Free plan immediately. Pro features (analytics, Gmail Import, CSV export,
-      archive actions) are hidden at once.
+      When your Pro pass expires, your account reverts to the Free plan immediately.
+      Pro features (analytics, CSV export, Pro receipt quota, and archive actions)
+      are restricted at once.
     </p>
 
     <h3>8.2 Seven-day grace period for reminders</h3>
@@ -513,34 +515,37 @@
 
     <h3>9.2 Permanent account deletion</h3>
     <p>
-      You can request complete deletion of your account and all associated data from:
+      You can deactivate your account in-app or request permanent deletion via:
     </p>
     <ul>
       <li>
-        <strong>In-app:</strong> Settings → Data &amp; Privacy → Delete Account
+        <strong>In-app deactivation:</strong> Settings (or Sidebar) → Data &amp; Privacy → Deactivate Account
       </li>
       <li>
-        <strong>Web:</strong>
+        <strong>Web guide:</strong>
         <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html"
            target="_blank" rel="noopener">
         dev-dhavalp.github.io/align-docs/account-deletion.html</a>
       </li>
       <li>
-        <strong>Email:</strong>
+        <strong>Direct deletion request (Email):</strong>
         <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>
       </li>
     </ul>
     <p>
-      Upon receiving a deletion request we will permanently erase all personal data
-      within <strong>30 days</strong>. Payment transaction metadata may be retained
-      for up to 7 years as required by financial recordkeeping laws.
+      In-app deactivation places your account in a 180-day reactivation window, with
+      automated backend purge of reminders and notification logs after 365 days.
+      Upon receiving a direct deletion request by email, we permanently erase all
+      personal data within <strong>30 days</strong>. Payment transaction metadata may
+      be retained for up to 7 years as required by applicable financial recordkeeping laws.
     </p>
 
-    <h3>9.3 Soft-deleted entries</h3>
+    <h3>9.3 Individual record deletions</h3>
     <p>
-      When you permanently delete an individual reminder or income entry from the Archive,
-      the record is soft-deleted and hidden from the app immediately. The underlying data
-      is retained for <strong>30 days</strong> for internal recovery, then purged.
+      When you delete an expense, receipt metadata record, or scheduled reminder, it
+      is deleted immediately from the cloud database and local cache (and local receipt
+      files are unlinked). When you permanently delete an income entry, it is
+      soft-deleted (hidden immediately) and purged after <strong>30 days</strong>.
     </p>
 
     <h3>9.4 Termination by Align</h3>
@@ -557,8 +562,9 @@
 
     <h3>10.1 Your data is yours</h3>
     <p>
-      All financial data you enter into Align — expense reminders, income entries,
-      payment history, notes — belongs to you. We do not claim ownership of your data.
+      All financial data you record or import in Align — expense reminders, manual or
+      SMS-detected expenses, income entries, receipt metadata, payment history, and
+      notes — belongs to you. We do not claim ownership of your data.
     </p>
 
     <h3>10.2 How we use your data</h3>
@@ -579,10 +585,11 @@
     <h3>10.4 Security</h3>
     <p>
       We implement industry-standard security measures including TLS encryption in
-      transit, encryption at rest, Row-Level Security (RLS) in our database, and
+      transit, encryption at rest, Row-Level Security (RLS) in our database,
+      AES-256-GCM / AndroidKeyStore local protection for pending SMS records, and
       HMAC-SHA256 webhook signature verification. See our
-      <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html">
-      Privacy Policy §10</a> for the full security summary.
+      <a href="https://dev-dhavalp.github.io/align-docs/privacy-policy.html#s11">
+      Privacy Policy §11</a> for the full security summary.
     </p>
 
     <h3>10.5 Offline operation</h3>
@@ -595,46 +602,34 @@
 
   <!-- ── §11 ── -->
   <div class="section" id="s11">
-    <h2><span class="section-num">11</span>Gmail Smart Import (Optional, Pro Only)</h2>
+    <h2><span class="section-num">11</span>Optional Features (SMS Tracking, Receipt OCR &amp; Spending Protection)</h2>
 
     <div class="info-box">
-      Gmail Smart Import is an <strong>optional</strong> Pro feature. It is never
-      activated without your explicit in-app consent.
+      SMS Transaction Tracking, Receipt Scanning, and Spending Protection are
+      <strong>optional</strong> features. Core manual tracking works without them.
     </div>
 
-    <h3>11.1 What it does</h3>
+    <h3>11.1 SMS Transaction Tracking (Android)</h3>
     <p>
-      Gmail Smart Import scans your Gmail inbox for billing confirmation emails and
-      payment receipts to suggest expense reminders, income entries, or manual expenses
-      for one-tap import.
+      When you explicitly consent and grant <code>RECEIVE_SMS</code>, Align listens
+      only to new incoming SMS broadcasts in real time (no historical inbox scan)
+      to extract structured transaction fields. Uncertain or logged-out detections go
+      to <strong>Pending Review</strong> for your confirmation. You may disable SMS
+      Tracking at any time in <strong>Settings → SMS Tracking</strong> or system settings.
     </p>
 
-    <h3>11.2 Scope of access</h3>
+    <h3>11.2 Receipt Scanning &amp; OCR</h3>
     <p>
-      We request read-only Gmail access (<code>gmail.readonly</code> scope) only.
-      We cannot send, delete, modify, or forward any emails. Raw email content is
-      processed in memory and is never stored on our servers.
+      You may optionally scan or upload JPG, PNG, or PDF receipts (up to 2 MB;
+      2/month Free, 30/month Pro). Receipt files remain stored locally on your device,
+      while extracted metadata is synced to your account.
     </p>
 
-    <h3>11.3 Your control</h3>
-    <ul>
-      <li>You may deny Gmail access — the rest of the app continues to work normally.</li>
-      <li>
-        You may revoke Gmail access at any time from
-        <strong>Settings → Smart Import → Disconnect</strong> or from
-        <a href="https://myaccount.google.com/permissions" target="_blank"
-           rel="noopener">myaccount.google.com/permissions</a>.
-      </li>
-      <li>Each imported item requires your explicit approval before being saved.</li>
-    </ul>
-
-    <h3>11.4 Google API compliance</h3>
+    <h3>11.3 Spending Protection (Android)</h3>
     <p>
-      Align's use of Gmail data complies with Google's
-      <a href="https://developers.google.com/terms/api-services-user-data-policy"
-         target="_blank" rel="noopener">API Services User Data Policy</a>,
-      including the Limited Use requirements. Gmail data is used only to provide
-      the import feature and is not used for advertising or shared with third parties.
+      If enabled with Android Usage Access (<code>PACKAGE_USAGE_STATS</code>), Align
+      checks locally on-device when a supported payment app opens in the foreground
+      and shows a local alert if your monthly expenses reach 90% of your budget.
     </p>
   </div>
 
@@ -751,11 +746,15 @@
       service unavailability.
     </p>
 
-    <h3>15.3 Data accuracy</h3>
+    <h3>15.3 Data accuracy &amp; automated detection</h3>
     <p>
-      Analytics, reports, and calculations in Align are based on the data you enter.
-      We are not responsible for errors in your financial records resulting from
-      incorrect data entry, synchronisation failures caused by device or network
+      Analytics, reports, and calculations in Align are based on the data you enter
+      or confirm. Automated features such as Android SMS Transaction Tracking and
+      Receipt OCR are convenience aids and may occasionally miss alerts, misread
+      receipts, or misclassify amounts or merchants; you are responsible for
+      reviewing Pending Reviews and verifying your recorded entries. We are not
+      responsible for errors resulting from incorrect data entry, carrier or OS
+      SMS delivery limits, synchronisation failures caused by device or network
       issues, or third-party service outages (Supabase, Razorpay, Google).
     </p>
 
