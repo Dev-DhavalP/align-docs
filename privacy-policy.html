@@ -241,9 +241,10 @@
     </p>
     <div class="info-box">
       <strong>Short version:</strong> We collect only what we need to run the app.
-      We do not sell your data. Gmail access and Android SMS Transaction Tracking
-      are optional and require your explicit in-app consent. You can delete your
-      account and all associated data at any time.
+      We do not sell your data. Optional features such as Android SMS Transaction
+      Tracking, Receipt Scanning, and Spending Protection require your explicit
+      in-app consent or device permission. You can deactivate your account or
+      request full data deletion at any time.
     </div>
     <p>
       This policy applies to the Align Android application and all associated
@@ -259,7 +260,7 @@
       <li><a href="#s1">Information We Collect</a></li>
       <li><a href="#s2">How We Use Your Information</a></li>
       <li><a href="#s3">Google Sign-In &amp; OAuth</a></li>
-      <li><a href="#s4">Gmail Smart Import (Pro Only)</a></li>
+      <li><a href="#s4">Receipt Scanning &amp; Spending Protection (Optional)</a></li>
       <li><a href="#s5">SMS Transaction Tracking (Optional, Android)</a></li>
       <li><a href="#s6">Financial Data You Store</a></li>
       <li><a href="#s7">Payment Processing</a></li>
@@ -302,14 +303,16 @@
 
     <h3>1.3 Financial Data</h3>
     <p>
-      Financial data in Align is entered manually by you, imported via Gmail
-      (see §4), or extracted locally on your device from incoming financial SMS
-      alerts when you enable optional SMS Transaction Tracking on Android (see §5):
+      Financial data in Align is entered manually by you, captured via optional
+      Receipt Scanning (see §4), or extracted locally on your device from incoming
+      financial SMS alerts when you enable optional SMS Transaction Tracking on
+      Android (see §5):
     </p>
     <ul>
       <li>Expense reminders: title, amount, currency, category, due date, recurrence, notes</li>
       <li>Income entries: title, amount, currency, source, date, recurrence, notes</li>
       <li>Discretionary manual expenses: amount, category, date, notes</li>
+      <li>Receipt metadata: merchant name, amount, currency, dates, file metadata, and local device file reference</li>
       <li>Payment history logs for each recurring or one-time entry</li>
     </ul>
 
@@ -358,9 +361,14 @@
           <td>Contract performance</td>
         </tr>
         <tr>
-          <td>Gmail Smart Import (optional, Pro only)</td>
-          <td>Gmail OAuth token, email snippets</td>
-          <td>Explicit consent</td>
+          <td>Receipt Scanning &amp; OCR (optional)</td>
+          <td>Camera/photo/file selection, on-device OCR fields, receipt metadata</td>
+          <td>Explicit consent / user action</td>
+        </tr>
+        <tr>
+          <td>Spending Protection budget alerts (optional, Android)</td>
+          <td>Local foreground payment-app check (<code>PACKAGE_USAGE_STATS</code>) and local monthly budget totals</td>
+          <td>Explicit consent / system permission</td>
         </tr>
         <tr>
           <td>SMS Transaction Tracking (optional, Android)</td>
@@ -403,11 +411,6 @@
       <li><code>email</code> — your email address</li>
     </ul>
     <p>
-      The Gmail read scope (<code>gmail.readonly</code>) is a <em>separate, optional</em>
-      consent collected only inside the app when you choose to use Gmail Smart Import
-      (see §4). It is never requested during sign-in.
-    </p>
-    <p>
       Your Google credentials are managed entirely by Google. Align receives only
       a secure session token via Supabase Auth and never handles your Google password.
     </p>
@@ -415,50 +418,31 @@
 
   <!-- ── §4 ── -->
   <div class="section" id="s4">
-    <h2><span class="section-num">4</span>Gmail Smart Import (Pro Only)</h2>
-    <div class="warn-box">
-      <strong>Optional feature.</strong> Gmail Smart Import is available to Pro
-      subscribers only and requires your explicit in-app consent before any Gmail
-      access occurs. You can revoke access at any time.
-    </div>
+    <h2><span class="section-num">4</span>Receipt Scanning &amp; Spending Protection (Optional)</h2>
 
-    <h3>What we access</h3>
+    <h3>4.1 Receipt Scanning &amp; OCR (Optional)</h3>
     <p>
-      When you grant Gmail access, Align reads a limited set of recent email
-      snippets (sender, subject, short body preview) to detect billing confirmations,
-      subscription renewals, and payment receipts. We request read-only access
-      (<code>gmail.readonly</code> scope) — we cannot send, delete, or modify emails.
+      When you choose to scan or import a receipt (JPG, PNG, or PDF up to 2 MB;
+      up to 2 receipts/month on the Free plan and 30 receipts/month on Pro), Align
+      requests camera or photo/file access only when you initiate a scan or upload.
     </p>
-
-    <h3>What we extract</h3>
     <ul>
-      <li>Provider or merchant name</li>
-      <li>Payment amount and currency</li>
-      <li>Due date or transaction date</li>
-      <li>Detected category (Subscriptions, Utilities, etc.)</li>
-      <li>Confidence score (high / medium)</li>
+      <li><strong>Local file storage:</strong> Your receipt image or PDF file (e.g. <code>receipt_*.jpg</code>) is saved locally on your device and is <strong>not</strong> uploaded to Supabase Storage.</li>
+      <li><strong>On-device OCR:</strong> Text extraction runs locally on your device to pre-fill merchant name, amount, currency, and dates.</li>
+      <li><strong>Synced metadata:</strong> Only structured receipt metadata (merchant name, amount, currency, document/payment/due dates, file name, file type, file size, local path reference, and optional notes) is synced to your Supabase <code>receipts</code> table.</li>
     </ul>
 
-    <h3>What we do NOT store</h3>
-    <ul>
-      <li>Raw email body text — never stored after extraction</li>
-      <li>Email subjects or sender addresses beyond the scan session</li>
-      <li>Any email content that is not related to billing</li>
-    </ul>
-
-    <h3>How to revoke</h3>
+    <h3>4.2 Spending Protection (Optional, Android)</h3>
     <p>
-      Go to <strong>Settings → Smart Import → Disconnect Gmail</strong> in the app, or
-      visit <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
-      myaccount.google.com/permissions</a> and remove Align's access.
+      Spending Protection is an optional Android feature that helps warn you before
+      overspending when you open a supported payment app (Google Pay, PhonePe, Paytm,
+      BHIM, or Amazon Pay).
     </p>
-
-    <div class="success-box">
-      Align's use of Gmail data complies with Google's
-      <a href="https://developers.google.com/terms/api-services-user-data-policy"
-         target="_blank" rel="noopener">API Services User Data Policy</a>,
-      including the Limited Use requirements.
-    </div>
+    <ul>
+      <li><strong>Permission:</strong> Requires your explicit grant of Android Usage Access (<code>android.permission.PACKAGE_USAGE_STATS</code>) in system settings.</li>
+      <li><strong>Local processing only:</strong> Align queries <code>UsageStatsManager</code> strictly on-device over a short recent window (about 20 seconds) solely to check whether one of the supported payment apps was opened in the foreground, compares your local monthly expense total against your 90% budget threshold, and displays a local notification.</li>
+      <li><strong>No upload or tracking:</strong> App usage events are never stored, logged, uploaded to Supabase, or shared with any third party. You can disable Spending Protection at any time in Settings or revoke Usage Access in Android system settings.</li>
+    </ul>
   </div>
 
   <!-- ── §5 ── -->
@@ -519,9 +503,9 @@
   <div class="section" id="s6">
     <h2><span class="section-num">6</span>Financial Data You Store</h2>
     <p>
-      Financial data in Align is entered manually by you, imported via Gmail
-      Smart Import (if enabled), or recorded via optional Android SMS Transaction
-      Tracking (if enabled). We store your recorded entries in our Supabase
+      Financial data in Align is entered manually by you, captured via optional
+      Receipt Scanning (see §4), or recorded via optional Android SMS Transaction
+      Tracking (if enabled, see §5). We store your recorded entries in our Supabase
       PostgreSQL database to sync across sessions and provide analytics,
       reminders, and reports.
     </p>
@@ -599,15 +583,17 @@
       <strong>Settings → Plan Details</strong> and to verify Pro plan status.
     </p>
 
-    <h3>Subscription plans</h3>
-    <p>Align Pro is available in two plans:</p>
+    <h3>Pro plans (Fixed-duration passes)</h3>
+    <p>Align Pro is available in two one-time, fixed-duration plans (no automatic renewal):</p>
     <ul>
-      <li><strong>Quarterly</strong> — billed every 3 months</li>
-      <li><strong>Yearly</strong> — billed annually (best value)</li>
+      <li><strong>Quarterly</strong> — 90 days of Pro access</li>
+      <li><strong>Yearly</strong> — 365 days of Pro access</li>
     </ul>
     <p>
-      Prices are fixed per currency and are not calculated using live exchange rates.
-      You can view pricing for your selected currency on the Sales screen.
+      If you purchase another plan while Pro is still active, the new duration stacks
+      onto your remaining expiry date. Prices are fixed per currency and are not
+      calculated using live exchange rates. You can view pricing for your selected
+      currency on the Sales screen.
     </p>
 
     <h3>Razorpay Privacy Policy</h3>
@@ -692,42 +678,41 @@
     <h3>Notification logs</h3>
     <p>Notification logs are automatically deleted after <strong>90 days</strong>.</p>
 
-    <h3>Soft-deleted entries (Archive → Delete Permanently)</h3>
+    <h3>Individual item deletions</h3>
     <p>
-      When you permanently delete a reminder or income entry, it is soft-deleted
-      (flagged as deleted) and hidden from the app immediately. The underlying
-      database record is retained for <strong>30 days</strong> for internal recovery
-      purposes, then permanently purged along with all related payment logs.
+      When you delete an expense, receipt metadata record, or scheduled reminder,
+      it is removed immediately from your local app cache and deleted from Supabase
+      (and local receipt files are unlinked from device storage). When you
+      permanently delete an income entry, it is soft-deleted (hidden immediately)
+      and purged after <strong>30 days</strong> by the nightly cleanup job.
     </p>
 
-    <h3>After Pro expiry or subscription cancellation</h3>
+    <h3>After Pro expiry or account deactivation</h3>
     <ul>
       <li>
-        Your data remains visible for <strong>180 days</strong> after your Pro
-        plan expires or your account is deactivated.
+        When your Pro plan expires or you deactivate your account via
+        <strong>Settings → Data &amp; Privacy → Deactivate Account</strong>, your
+        account enters a <strong>180-day</strong> reactivation window
+        (<code>data_available_until</code>).
       </li>
       <li>
-        After 180 days your data is hidden from the app but retained in the
-        database for up to <strong>365 days</strong> to allow reactivation.
-      </li>
-      <li>
-        After 365 days, all reminders, payment logs, and notification logs
-        for your account are permanently purged from the database by an automated
-        nightly cleanup job.
+        After <strong>365 days</strong> from account deactivation or Pro plan expiry,
+        reminders and notification logs for the account are permanently purged from
+        the database by an automated nightly cleanup job.
       </li>
     </ul>
 
-    <h3>Account deletion</h3>
+    <h3>Direct account &amp; data deletion requests</h3>
     <p>
-      You can request full account deletion at any time from
-      <strong>Settings → Delete Account</strong> or by visiting:
+      You can review deactivation and deletion steps at any time at
       <a href="https://dev-dhavalp.github.io/align-docs/account-deletion.html"
          target="_blank" rel="noopener">
       dev-dhavalp.github.io/align-docs/account-deletion.html</a>.
     </p>
     <p>
-      When you delete your account, we immediately mark your account as deactivated.
-      All personal data is permanently erased within <strong>30 days</strong>.
+      If you request immediate permanent deletion by emailing
+      <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>, we process
+      full personal data erasure within <strong>30 days</strong>.
       Payment transaction metadata may be retained for up to 7 years as required by
       applicable financial recordkeeping laws.
     </p>
@@ -773,10 +758,6 @@
         verified using cryptographic signature checks to prevent payload forgery.
       </li>
       <li>
-        <strong>ReDoS protection</strong> — Regular expressions used in Gmail email
-        parsing use bounded quantifiers to prevent event-loop blocking attacks.
-      </li>
-      <li>
         <strong>No third-party data brokers</strong> — We do not share, sell, or
         rent your personal data to any third party for commercial purposes.
       </li>
@@ -806,12 +787,6 @@
           <td><strong>Google OAuth</strong></td>
           <td>Sign-in authentication</td>
           <td>Name, email, photo URL</td>
-          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Gmail API</strong></td>
-          <td>Smart Import — billing email scanning (optional, Pro)</td>
-          <td>Read-only email snippets (not stored)</td>
           <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
         </tr>
         <tr>
@@ -875,9 +850,9 @@
         time as a CSV file from the Export Reports screen.
       </li>
       <li>
-        <strong>Withdraw consent</strong> — You can revoke Gmail access at any time
-        (see §4), disable SMS Transaction Tracking at any time (see §5), and
-        disable notifications at any time (see §8).
+        <strong>Withdraw consent</strong> — You can revoke camera/photo or Usage Access
+        permissions in Android system settings (see §4), disable SMS Transaction
+        Tracking at any time (see §5), and disable notifications at any time (see §8).
       </li>
       <li>
         <strong>Object</strong> — Object to processing of your data where we rely on
