@@ -502,19 +502,24 @@
       </thead>
       <tbody>
         <tr>
-          <td><strong>Individual Expenses</strong></td>
+          <td><strong>Individual Expenses &amp; Reminders</strong></td>
           <td>Removed from device cache (MMKV) and UI immediately.</td>
-          <td>Hard-deleted immediately from the cloud database; offline actions sync and clear immediately upon reconnection.</td>
+          <td>Deleted immediately from the cloud database; offline actions sync and clear upon reconnection. (If soft-deleted, scheduled reminders are purged within <strong>30 days</strong> by the automated nightly cleanup job.)</td>
         </tr>
         <tr>
           <td><strong>Individual Receipts (Images &amp; OCR)</strong></td>
-          <td>Image file deleted from local phone storage immediately; removed from UI.</td>
+          <td>Image/PDF file deleted from local phone storage immediately; removed from UI.</td>
           <td>Database metadata record deleted immediately from the cloud database. Local file deleted via filesystem unlink.</td>
         </tr>
         <tr>
-          <td><strong>Individual Reminders &amp; Incomes</strong></td>
+          <td><strong>Individual Income Entries</strong></td>
           <td>Hidden from app UI and local cache immediately.</td>
-          <td>Soft-deleted records are retained in database for <strong>30 days</strong> for internal sync recovery, then permanently purged by the automated nightly cleanup job (2:00 AM UTC).</td>
+          <td>Soft-deleted records are retained in the database for <strong>30 days</strong> for internal sync recovery, then permanently purged by the automated nightly cleanup job (2:00 AM UTC).</td>
+        </tr>
+        <tr>
+          <td><strong>SMS Pending Reviews, Encrypted Queue &amp; Dedup Cache (Android)</strong></td>
+          <td>Pending Reviews can be dismissed individually in Settings; disabling SMS Tracking stops future SMS capture without erasing existing local queue items.</td>
+          <td>Stored strictly on-device (never uploaded as raw SMS). Pending queue items clear as processed; the SHA-256 deduplication hash expires automatically after <strong>14 days</strong>. Clearing app storage or uninstalling removes all local SMS data.</td>
         </tr>
         <tr>
           <td><strong>Notification Logs</strong></td>
@@ -524,7 +529,7 @@
         <tr>
           <td><strong>Account &amp; Auth Profile</strong></td>
           <td><strong>Retained</strong> — unaffected by individual item deletions.</td>
-          <td>Only removed if the user explicitly requests full account deactivation under Settings.</td>
+          <td>Only affected if you deactivate your account under Settings → Data &amp; Privacy → Deactivate Account or request deletion by email.</td>
         </tr>
       </tbody>
     </table>
@@ -540,7 +545,7 @@
     <p>Please note that deleting individual transactions, receipts, or reminders is <strong>not</strong> the same as deleting your Align account:</p>
     <ul>
       <li><strong>Individual Deletion (This Guide):</strong> Deletes specific records while keeping your account active, your login credentials valid, and your remaining financial plans and categories intact.</li>
-      <li><strong>Full Account Deletion:</strong> If you want to permanently erase your entire Align account, profile, all reminders, and subscription settings at once, go to <strong>Settings → Deactivate Account</strong> in the app, or follow our step-by-step <a href="./account-deletion.html">Account Deletion Guide</a>.</li>
+      <li><strong>Full Account Deactivation &amp; Deletion:</strong> If you want to deactivate your entire Align account (180-day reactivation window) or request permanent deletion, go to <strong>Settings (or Sidebar) → Data &amp; Privacy → Deactivate Account</strong> in the app, or follow our step-by-step <a href="./account-deletion.html">Account Deletion Guide</a>.</li>
     </ul>
   </div>
 
@@ -562,7 +567,7 @@
 <footer>
   <p>© 2026 Align. All rights reserved. &nbsp;·&nbsp;
     <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="./terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
+    <a href="./terms.html">Terms of Service</a> &nbsp;·&nbsp;
     <a href="./account-deletion.html">Account Deletion</a> &nbsp;·&nbsp;
     <a href="./data-deletion.html">Data Deletion</a>
   </p>
@@ -570,3 +575,4 @@
 
 </body>
 </html>
+
