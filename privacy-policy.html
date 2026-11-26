@@ -540,9 +540,9 @@
 
     <h3>Offline access</h3>
     <p>
-      Align caches your data locally on your device using MMKV encrypted storage
-      so the app works when you are offline. Pending changes are queued and synced
-      to the server when connectivity is restored.
+      Align caches your data locally on your device in MMKV app storage protected
+      by Android's application sandbox so the app works when you are offline.
+      Pending changes are queued and synced to the server when connectivity is restored.
     </p>
   </div>
 
@@ -713,8 +713,10 @@
       If you request immediate permanent deletion by emailing
       <a href="mailto:alignapps4@gmail.com">alignapps4@gmail.com</a>, we process
       full personal data erasure within <strong>30 days</strong>.
-      Payment transaction metadata may be retained for up to 7 years as required by
-      applicable financial recordkeeping laws.
+      As a stated policy commitment, payment transaction metadata may be retained
+      for up to 7 years where required by applicable financial recordkeeping laws
+      (note: our database does not currently run an automated 7-year payment purge
+      and retains payment records indefinitely unless removed manually).
     </p>
 
     <div class="info-box">
@@ -739,10 +741,11 @@
         infrastructure.
       </li>
       <li>
-        <strong>Local storage</strong> — Data cached on your device is stored using
-        MMKV encrypted storage (Android Keystore). Pending Android SMS transactions
-        and 14-day deduplication hashes are stored locally in <code>noBackupFilesDir</code>
-        using AES-256-GCM encryption backed by <code>AndroidKeyStore</code>.
+        <strong>Local storage</strong> — General app data cached on your device is
+        stored in local app storage (MMKV) protected by Android's application sandbox.
+        Pending Android SMS transactions and 14-day deduplication hashes are stored
+        separately on-device in <code>noBackupFilesDir</code> using AES-256-GCM
+        encryption backed by <code>AndroidKeyStore</code>.
       </li>
       <li>
         <strong>Row-level security</strong> — Supabase Row-Level Security (RLS)
