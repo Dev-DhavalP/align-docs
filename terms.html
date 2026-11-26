@@ -536,8 +536,10 @@
       In-app deactivation places your account in a 180-day reactivation window, with
       automated backend purge of reminders and notification logs after 365 days.
       Upon receiving a direct deletion request by email, we permanently erase all
-      personal data within <strong>30 days</strong>. Payment transaction metadata may
-      be retained for up to 7 years as required by applicable financial recordkeeping laws.
+      personal data within <strong>30 days</strong>. As a stated policy commitment,
+      payment transaction metadata may be retained for up to 7 years where required by
+      applicable financial recordkeeping laws (our database currently retains payment
+      records indefinitely without an automated 7-year purge schedule).
     </p>
 
     <h3>9.3 Individual record deletions</h3>
@@ -594,9 +596,11 @@
 
     <h3>10.5 Offline operation</h3>
     <p>
-      Align caches your data locally using MMKV encrypted storage so you can view
-      and interact with your data when offline. Changes made offline are queued and
-      synced when connectivity is restored.
+      Align caches your data locally in MMKV app storage protected by Android's
+      application sandbox (with AES-256-GCM / <code>AndroidKeyStore</code> encryption
+      used specifically for the native SMS queue and deduplication files) so you can
+      view and interact with your data when offline. Changes made offline are queued
+      and synced when connectivity is restored.
     </p>
   </div>
 
